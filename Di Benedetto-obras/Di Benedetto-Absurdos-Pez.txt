@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="ruta/al/esquema.rng" type="application/xml"schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+
+    <teiHeader>
+        <fileDesc>
+                <titleStmt>
+                    <title>Domar a la divina garza</title>
+                    <author>Sergio Pitol</author>
+                    <date>1988</date>
+                    <respSmt>
+                        <resp>Estudiante y creadora del archivo TEI</resp>
+                        <name>Luciana Silvestri</name>
+                        <date>2026</date>
+                    </respSmt>             
+                </titleStmt>
+                <extent>
+                    <mesure unit="pages">116</mesure>
+                </extent>
+                 <publicationStmt>
+                    <publisher ref="https://ww3.lectulandia.com/">Lectulandia" (CA16204)</publisher>
+                    <availability><licence target="https://creativecommons.org/licenses/by/4.0/"/></availability>
+                </publicationStmt>
+                    <sourceDesc><bibl type="firstEdition">
+                        <date>1988</date>
+                        <publisher>Ediciones Era</publisher>
+                        <pubPlace>México</pubPlace>
+                    </bibl><bibl type="digitalSource">
+                        <publisher>Trivillus</publisher>
+                        <date>2016</date>
+                        <ref target="https://ww3.lectulandia.com/book/cuentos-completos-antonio-di-benedetto/"/>
+                    </bibl></sourceDesc>
+                </publicationStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="1">
+
+Los susurros de la noche reculan, para Lumila, y desaparecen. Se le hacen un
+vacío en la mente y se adormece. Por más que se enzarcen tenazmente en el
+monte, lancen bocadas como suspiros, o chirríen, o se parezcan a los lamentos
+y el peligro.
+Duerme bajo la noche, la Lumila, un sueño ligero y frágil. Se le quiebra y
+le pone los ojos muy abiertos lo que le viene de adentro: el presentimiento.
+No vuelve su hombre. No es de fiar tanta ausencia.
+Ya no dormirá, mientras no lo vea; se perece por verlo, aunque no
+aparezca sano… ni entero. Se retrae y se comprime ante este último
+pensamiento: que regrese, del boliche del rancherío lejano, con algunos tajos
+en la cara o en el cuerpo.
+Todo el silencio —que no es silencio, sino murmullos apelmazados para
+su conciencia, porque no llegan los sonidos que ella aguarda⁠— se apelotona y
+se le hace como una bola que le estorba en el vientre.
+Tiene ganas de llorar, en estas altas horas más que nunca, pero se frena,
+atenta a oír, porque aun a distancia la consolará cualquier indicio del jinete.
+No tiene que adivinar la naturaleza de los ruidos, sin esmero los descifra
+todos, de las aves y las alimañas, o del aire. Busca quedarse en blanco de
+ellos, para filtrar el que le conviene. Busca recobrar memorias agradables,
+para distraerse, y las comunes, y se acuerda de otro terror de la infancia: el
+pájaro enorme con cuerpo de pez.
+—Y sin patas —suele comentar su hombre, que asegura haberlo visto.
+—¿Y cómo hace para posarse? —⁠ella ha porfiado siempre, esperanzada
+en que sea falso que ese monstruo existe.
+—Se posa en el agua.
+—Por aquí no hay agua.
+—Antes la había, grande como el mar.
+—Pero si no eras nacido, Gabriel…
+Acorralado, porque jamás logra establecer si vio al pájaro, lo soñó o es de
+oídas que lo describe, el hombre reargumenta:
+Página 313
+—Asienta en la arena lisa, todo esto que fue el fondo del agua grande.
+El oído entrenado de la Lumila no podría distinguir, tal vez, el asentarse
+de los cascos del caballaje que está volviendo, acallado por el manto de arena,
+si no fuera porque las herraduras se dan constantemente con las conchillas de
+moluscos, que rapizan de blanco, matizado de celeste, vastas extensiones de
+eso que, dicen, fue mar, y es donde el matrimonio anidó su pobreza.
+El caballo se detiene. Merman para Lumila las referencias, y pasa rato.
+¿Ha venido solo…? ¿Se ha desgraciado Gabriel…? Espera, mordiendo el
+borde de la sábana. Lumila no puede salir a ver con sus ojos, está anudada a la
+cama.
+El animal suelta un relincho prudente, que a la Lumila le confunde las
+impresiones: parece relincho de alertar a los de la casa, o de sentirse solo y
+llamar a la gente habitual; también, por fortuna, semeja un modo de
+despabilar al que lo monta y avisarle que han llegado a destino.
+Después, un ruido seco de fardo que cae (o de cuerpo muerto que se
+derrumba). Para Lumila subsiste la espera, aún, pero más desesperada. Porque
+ella imagina que le mataron al hombre, lo cruzaron sobre la montura y
+soltaron la bestia seguros de que enfilaría al corral.
+Todavía se intriga, porque no puede acudir a indagar con su propia
+mirada.
+Más rato y, tras algunos sonidos precursores, el amo del hogar, medio
+piltrafa el porte, se encuadra en el vano de la puerta, cara turbia frente al
+resplandor sereno de la candela.
+Para Lumila vienen juntos un lloro rabón y consolado y una sensación que
+de una sola olida —⁠ha irrumpido un vaho de alcohol en la atmósfera⁠— le
+hace proferir el reniego de: «¡Jiede…!».
+El hombre gatea hasta el lecho, lo escala como puede, prendiéndose de las
+curvas de hierro del respaldo, al tumbarse medio aplasta a la mujer pasiva, y
+sin preparativos lo fusila el sueño.
+Lumila despierta con sed que apacigua un resto de agua que mantenía el
+tazón. Le apetece más; sin embargo, no la pedirá del durmiente, que con tanta
+serenidad, sin hacerse sentir, reposa a su lado.
+Oscuras mariposas de terciopelo revolotean sobre Lumila y, al fin, le
+cubren los ojos, entregándola a una nada tranquila.
+De cuyo dominio otra vez la extrae la sed. Pero ya es el alba y el ansia se
+le hace de mate que viene mezclada con hambre, porque el Gabriel faltó ayer
+Página 314
+a la hora de la cena y ella, claro, impedida como es, sola, no puede.
+Por esa reflexión —de que él faltó⁠— comienza a enterarse que algo
+diferente les está ocurriendo. Extraña que amanezca sin que él la atienda con
+un mate aromoso y cálido, porque, si a las veces se pierde, de todas maneras
+hay que reconocer que cumplidor y hacendoso es, y compasivo, con ella, que
+por sí misma apenas se puede valer.
+Ya se recuerda del todo y lo examina con una mirada prolija y un ánimo
+receloso y precavido. Permanece vestido, encogido y destapado. Y ahora que
+lo observa mejor descubre que la mano izquierda se queda casi en el aire,
+medio apoyada en el pecho, curvos los dedos, como si ahí, en el lugar del
+corazón, se le hubiera encendido una brasa y él llevara el ademán de
+arrancarla.
+Después, Lumila entiende.
+Se ha bebido su llanto, suelto sin control durante horas, y las lágrimas le han
+atenuado la sequedad de la boca.
+Ha renacido, con el día, cuanto tiene vida en redor del puesto.
+Los balidos, sin perder su natural humildad, solicitan con insistencia la
+libertad que niega el corral de retorcido palo a pique, impedimento del trote
+hacia el pasto ralo y los tallos tiernos que conceden la subsistencia a la magra
+majada.
+Las gallinas y el pavo están en su rutina, afanado el pico en abatir insectos
+y deshebrar raíces.
+Gandulean los perros, sin rebaño que acompañar a campo abierto.
+El caballo, sin las restricciones del corral o del palenque, ha osado tomar
+su ración de pasto del cobertizo, y sólo le pesan el yugo de la montura por
+ahora inútil y el estorbo de las riendas que se arrastran y le enredan el paso si
+las pisa.
+Prospera la mañana y viene ese momento de aplacamiento general, tal
+como si cuanto existe de animado acatara la magia de ese astro de ojo
+ardiente que se coloca por arriba de todo y por un rato permanece quieto y
+vigilante.
+Los chivitos han acallado sus quejas.
+El silencio se propaga y anega el rancho.
+Cesan los quejidos y los hipos de Lumila. Se rinde.
+Y allí están los dos, sobre el lecho, uno muerto del todo, la otra con la
+mitad de sus miembros poseídos por la muerte.
+Página 315
+Lumila ha descuidado sus necesidades más íntimas, que ahora se le
+manifiestan, exigentes y perentorias por haber sido postergadas.
+Sabe que afrontará un esfuerzo superior al normal, porque hasta para eso
+se venía sosteniendo en su hombre, y tendrá que hacerlo sola.
+Se propone descender de la cama. Toma apoyó en el brazo izquierdo y
+procura favorecer el impulso con la pierna del mismo costado. Pero no le
+obedece.
+Rehace la tentativa y falla.
+Se le desmanda la pierna izquierda, igual que en otro tiempo y hasta el
+presente, quizás para siempre, se le desgobernaron pierna y brazo del flanco
+derecho.
+Masculla una maldición y se asusta, más que de su estado, de haber
+proferido palabras profanas.
+Se pregunta si está muriendo por partes y se mira la mano que todavía le
+sirve, con prevención de que también se invalide.
+Entre tanto pesar y temor tamaño, se moja, y se avergüenza como si fuera
+la primera vez. Se excusa, se reprocha; gimoteando parece que quiere explicar
+que ella quiso y procuró ir a hacerlo donde se debe:
+—Por ser limpia, me pasa…
+Reacciona, reclamada por la necesidad de que esto cambie pronto, de
+inmediato, que cese el casi total tullimiento que de súbito padece. Acciona la
+cabeza para consultar, medio ladeada, las estampitas que tiene paradas en la
+mesa de luz, y con fervor, acezante, reza y ruega, reza y ruega, implora… «un
+milagrito, Señor, que se me resucite el Gabriel».
+Se aplica a mirar intensamente al marido yacente y pálido, con algún
+sobresalto por si lo que pidió sucede de repente. En la espera Lumila se está
+preguntando por dónde podrá recuperar la vida: por la carne o por el
+entendimiento… Si primero que nada abrirá los ojos (que en el trance se le
+quedaron cerrados, tal vez porque finó cuando se hallaba durmiendo). O si se
+hará presénte, más bien, de palabra, y qué misterios podrá decir. Y si para
+volver se sufre…
+Atardece.
+La acosan y la desgarran las necesidades. El calor no mengua. Transpira
+por el ambiente caldeado y por los empeños denodados de desclavarse del
+lecho.—Tiene que ser por miedo… Miedo al dijunto, aunque sea mi hombre. El
+miedo mata y me mató la pierna que me quedaba sana.
+Página 316
+Necesita ver algo viviente en su cercanía, junto a ella. Llama a los canes:
+—Fiel, Lión, Capú…
+No hace falta que siga: «Blanquita, Mancha, Canela…».
+Ya están ahí los seis, sacudiéndose el polvo de la larga siesta en el patio o
+bajo el alero. «De seguro con hambre» se dice Lumila y medita: «Mismo que
+mí».
+Sin embargo, contra la costumbre confianzuda de los seis, no pasan de la
+puerta, ni la Blanquita, tan mimosa que sin permiso se suele acomodar en la
+almohada.
+La actitud reticente de los monteros empuja a Lumila hacia otra
+cavilación: ya no es Gabriel, es un muerto el que está en el rancho, y si esta
+presencia hasta a los perros vuelve cobardes, ¿qué noche le aguarda a ella…?
+¿Cómo soportará las tinieblas con un finado en su cama…?
+La domina el ansia de encender la vela, a costa de cualquier esfuerzo. Le
+habla a su mano activa como si fuera una amiga, pidiéndole que no ceda, que
+la socorra, que no la abandone en la negrura… La excitación le hace malograr
+fósforos y trabajos, al cabo la llama brota. Lumila dice gradas y, al
+reencontrar por la luz las imágenes, se decide a encomendar otro milagro. Ya
+ha estado cavilando que pidió demasiado y teme haber causado ofensa y
+merecer castigo. «Era mi hombre —⁠se justifica⁠—, conmigo era bueno,
+aunque para los demás no fuera nadie. Pobrecito Gabriel, no hizo mérito».
+La ronda la tentación de suplicar que vuelva el hijo, que se fue a la ciudad,
+a las fábricas. Ella podría decir, en su ruego: «Mi hijo, Señor, mío y del
+Gabriel, legítimo de los dos, con fe de bautismo y todo…». Se apoca, sin
+atreverse a reincidir: «Sería muy mucho pedir, un milagro demasiado
+grande…». Y se cobija en las deliberaciones: «Pudiera ser que vuelva solo…
+Que perciba el llamado». Se pregunta cómo será ahora, después de diez años.
+Si se acordará de ella, si podrá saber que el padre no vive. Y deduce que si el
+padre ha muerto ya es ánima y un ánima le puede hablar a los vivos, aunque
+sea cuando éstos duermen, y quizás el ánima de Gabriel puede avisarle al hijo
+que ella está sola y lo necesita desesperadamente… ¿Puede…?
+Contra lo que calculaba, la noche no le agranda los terrores.
+De cierta manera las sombras la amparan, le han concedido la
+misericordia de no ver tan patente lo que tiene a) lado. Lo presiente, no hay
+remedio; pero no lo siente, o más bien ya lo siente, o quiere sentirlo, ajeno, y
+evita rozarlo.
+Página 317
+Sin embargo, como una culpa recuerda que no le ha dado un beso de adiós
+en la frente. Se dispensa, hablando a alguien que no es él:
+—Habrá tiempo. Todavía está aquí, no se ha ido.
+Se defiende, hablándole a él:
+—No puedo moverme para alcanzar tu frente. Ya ves, ni agua tengo y me
+muero de sed…
+Entonces se transporta a preocupaciones más inmediatas. Necesita beber,
+necesita comer. Precisa un auxilio sobrenatural, pero debe resignarse a
+milagros más chicos que los que anduvo implorando, y los propone en
+manojo, a montones: que asome don Casimir o se apiade el achurero. Que le
+haga un cumplido la Inés, que se le ocurra pasar. Que venga la recorrida. Que
+venga el dentista loco. Que venga… Que venga…
+Sin embargo, por ahí, corrientemente, no viene nadie. No se le esconden
+las imposibilidades: don Casimir, el puntillero, tendero ambulante, árabe y
+enamoradizo, sólo se interna por esas huellas a los meses, no muy seguido.
+(En Lumila retoña como dibujada la memoria de aquella fina puntilla que
+nunca pudo comprar). El vendedor de achuras no les perdona la deuda, y una
+vez por semana —⁠así saben que es martes⁠— le escuchan sonar la corneta,
+pero bien lejos. (Cuelga vacía del entramado de caña del corredor la fiambrera
+de alambre tejido). La Inés toma ese rumbo únicamente de paso hacia el
+caserío, cuando se anoticia de que los remolques de Sanidad traerán al
+médico, a las cansadas. En cuanto a la recorrida de la partida policial, sólo se
+arrima a los ranchos donde le halagan el paladar al comisario y más de cierto
+si lo despiden con lechón de regalo. Y el dentista, con su Ford de capota y el
+torno de pedal montado atrás… Se empecina en repechar por los rudimentos
+de camino y ni cuenta se da de los puestos que deja hacia adentro del campo,
+a menos que alguien se adelante a hacerle señas o lo persiga a caballo hasta
+donde se le atasque el coche, en algún jarillal. Lo evoca, Lumila, con su largo
+guardapolvo blanco, las manos pulcras y la mirada fanática, y se va diciendo:
+«Y tan Bueno que es, pero tan loco…», hasta que vuelve sobre sí misma y se
+dice: «Tan sola, mi alma…», y se conmisera de su desvalimiento que nada
+alivia.
+La gana el sueño y sueña que es moza y camina descalza por el arenal
+pisando y buscando Conchitas de mar y el agua le lame los pies y los cubre de
+espuma y la corteja el Gabriel y se le niega ella porque tiene sed y sus labios
+no están para besos, codician el agua, y con Gabriel no quiere porque él… se
+ha muerto.
+Despierta. Es cierto: está muerto, bien muerto casi junto a ella.
+Página 318
+Grita. Necesita gritar.
+Desde el patio, los perros la escuchan, a su manera la siguen, la copian,
+con lastimero aullido.
+Pero uno, no. Se escurre, humildito, en la habitación, y va a echarse al pie
+de Lumila. Es el Fiel.
+A Lumila la vence la ternura y llora lágrimas dulces.
+Mas luego, consumida, se interna de nuevo en el sueño, y se sueña en la
+laguna o el mar que fue, y hay tormenta que abate las canoas de totora de los
+pescadores que usan las redes y el ave de enormes alas y cuerpo de pez
+irrumpe en su cuarto del rancho, con un graznido y un fragor.
+Despierta. Nada alea. No hay aves raras que violenten ese ámbito triste y
+recogido donde el temor de Lumila va cediendo, tal vez porque cosa alguna
+ocurre, excepto en sus pesadillas, o porque la guarda el Fiel, tan sumiso.
+«Así debiste llamarte —piensa que tendría que decirle⁠—: Sumiso», y
+pronuncia el nuevo nombre con un tono acariciante.
+Previene el día que vendrá. Como se está durmiendo, se le enciman
+ensoñaciones y deseos, y en ellas su puesto desborda de gente que la atiende
+en su luto y sin duda se ocupará de darle sepultura al finadito. Pero ninguno le
+calma la sed.
+A la hora de las cabras, se le retuerce la pena por la chivada que no tiene
+escape al campo para su mascada, y ha de soportar resecos los lisos troncos de
+bebedero… A la par, codicia la leche de las ubres de cabra que podrían darle
+líquido y alimento.
+Tolera el amanecer y los balidos que apenan. Sobrelleva o pretende
+ignorar la compañía forzosa que tiene en el lecho, porque —⁠se conforta⁠— es
+mejor no presenciar lo que está pasando en la piel de su hombre.
+Pone los sentidos y la imaginación en la espera. Unos segundos escucha la
+campanilla de don Casimir el puntillero; otros la deslumbra un destello de sol
+en la hojalata que forma el techo curvo de la carretela del achurero, cuando
+está haciendo el codo de la huella hacia el rancho…
+Nada de eso sucede. Nadie viene.
+Viene, sí, y no convocado por voluntad humana alguna, el Zonda, el
+viento malo, caliente y terroso.
+Zumba, danza y manotea, arroja sus aires cargados de polvo y arena,
+destroza los brotes y ramas. En la inmensidad, se afana en sacudir los ranchos
+dispersos de las familias pastoras de cabras, tan apartadas unas de otras que ni
+Página 319
+ante adversidades tales pueden fortificarse entre sí. Los cala, les vuela los
+techos.
+En el puesto de Lumila es peor. La puerta de la habitación quedó abierta
+desde que regresó Gabriel. Ella no podrá cerrarla.
+Con brutalidad, el viento la ahoga de tierra, mientras le va volteando y
+rompiendo los muebles débiles, el espejo de luna, sus calmos tesoros de
+adorno o devoción habituados a la tapa de la cómoda.
+La puerta golpea sus clacs hasta que se desvencija. La ventana cincha, por
+no reventar.
+Lumila se refugia bajo la cobija, se sofoca, se destapa, vuelve a cubrirse.
+Repite y repite el proceso.
+Fama sostiene el malvado de cometer sus tropelías veinticuatro horas sin
+detenerse. Recordarlo lleva a la mujer a los bordes de la desesperación.
+Pero esta vez, pasado el mediodía, declina en su furor y poco a poco
+concede que la atmósfera se torne más respirable.
+Con una máscara de tierra embarrada en surco por los lagrimones, emerge
+Lumila. Contempla el desastre; imagina el detrimento, quizás la matanza,
+entre sus animales; se pregunta si el ruido fuerte de la mañana no fue la
+voladura del cobertizo… y trata de no mirar al hombre.
+No puede no hacerlo.
+Los desarreglos del viento lo han hecho caer de la cama. Ya lo presentía,
+Lumila, hace rato. Faltaba peso, faltaba bulto al costado. Sólo que no oyó el
+ruido, tapado por los bramidos del aire.
+No se atreve a confesar que se alivia. Ya no lo tiene adosado, ya no lo
+verá si no lo busca indinándose hacia esa parte.
+Sin embargo, de otro modo, la presencia perdura:
+«¡Jiede!», olisquea con rechazo Lumila.
+Hiede. El calor abrasador del Zonda ha acelerado la descomposición del
+cuerpo.
+La mujer se amarga y cruje de impotencia. Se cuida, por respeto a los
+muertos, de sublevarse contra «ese hombre».
+La hambruna desbanda a los perros. Se internan en los montes a recuperar el
+ancestral oficio de cazar para comer. Sólo dos se quedan: el Fiel y la
+Blanquita.
+El Canela y el Capú, estrechamente compañeros y solidarios, derivan
+pronto del rendimiento incierto del matorral al territorio humano, sabedores
+Página 320
+de que donde hay gente se producen sobras de comida, a veces.
+Se avecinan a los ranchos donde en alguna ocasión llegaron con el amo;
+sin embargo, los ahuyenta la hostilidad de sus propios congéneres.
+Cuando avistan el hogar de Inés, la perrada de la casa hace frente a la
+invasión, pero el litigio no pasa de los tarascones, ya que el puestero reconoce
+a los visitantes y aplica las leyes Campesinas de la hospitalidad. Pone paz y
+los admite convencido de que su compadre, don Gabriel, ha de andar por las
+cercanías, tal vez recogiendo chivos sueltos, y ya se aparecerá tras ese par de
+adelantados.
+Inés ha observado el proceder de su marido, le pregunta el porqué, él
+aduce sus razones y ella las atiende, aunque no las comparte. La alumbra un
+momento la sospecha de que algo anormal ocurre en el puesto de Lumila.
+Pero no hablará por ahora. Se propone hacerlo más tarde, cuando su hombre
+se dé cuenta solo que ha errado. No de taimada, por no contradecir su
+autoridad no más.
+No al día siguiente, al otro después, el Fiel, ya el único doméstico
+consecuente en permanecer cerca de sus dueños —⁠que por causa del hambre
+atroz saltó al corral y padeció cornada de macho cabrío⁠— ambula con un
+desasosiego turbador. Sólo a ratos acude al reparo del cuarto matrimonial.
+Ahora está enroscado en el hoyo que sus huesos han ido formando en el
+piso de esa habitación y se inquieta por las voces alteradas que,
+entrecortadamente, tan cerca de sus orejas, emite la mujer.
+Lumila, en los límites del agotamiento, anda confundida entre cielo y
+tierra, y suplica otro milagrito: que le vuelva el uso de la pierna impedida
+—⁠no la de antes, ya no demanda por ésa, la da por perdida⁠—, de ésta que se
+le desmandó la primera mañana de su viudez.
+Decide que se presentará un anciano, que el anciano le concederá el bien
+que ha pedido.
+Se figura el rostro, radiante como chorros de sol, y con la belleza pura de
+los ojos zarcos.
+Abre los suyos, a verlo.
+En ese momento, del techo, a un costado, se desprende un bicho oscuro de
+alas muy amplias.
+Una corriente de miedo recorre el pecho de la mujer trabajada por tantos
+decires sobre el pájaro con cuerpo de pez. No obstante, como su mente no
+está extraviada y recompone íntegramente su lucidez, se apresura a controlar
+Página 321
+con cuidado esa primera ocasión en su vida de darse con el monstruo de
+tantas mentas.
+Se desencanta. Considera: «si es el que era, se ha achicado por demás». E
+intuye que, al menos ése, es apenas murciélago.
+El aleo del oscuro «perro del aire» alborota al perro del suelo, mientras
+Lumila retoma el hilo de su petición de milagro y, ya confundida, sin saber de
+cierto si obtuvo o no el asentimiento, ensaya servirse de su pierna izquierda.
+Le responde.
+Entorna los párpados, en tanto por su interior desciende una onda de paz
+benevolente.
+Aplica cuanta precaución puede, cuanto tino le resta, para reiterar la
+prueba, y también la segunda experiencia resulta.
+Entonces la posee el vehemente impulso de correr, de llegar como pueda
+adonde se saciará de líquido. Maniobra con su medio cuerpo válido para
+descolgarse de la alta cama, a fin de caminar, o rodar o arrastrarse hasta el
+pozo, que ya en la boca del agua sabrá cómo darse maña para echar el balde.
+No obstante, por la precipitación o por su lastimoso estado físico, se
+atropella, cae y se hiere con un pedazo del espejo roto.
+Vislumbra que la oportunidad se escapa, y la postra el desmayo.
+Se le entretejen vacíos y nociones. Una de éstas es que le besan las
+lastimaduras, con la sensación de que la aterra el beso, sea de quien fuere.
+Recobra debilitados los sentidos y descubre que su perro pasa y repasa su
+lengua cálida por la herida. Cambia en consecuencia sus impresiones,
+confiada, y sonríe. Está exhausta y ha quedado tendida de espaldas. Ya se
+descansa y le dice, con cariño y gratitud:
+—Sos mi perro y te llamás Fiel. Bien nombrao, siempre lo supe.
+Sin embargo, una evolución acelerada en la forma de lamerle la carne
+sangrante, abierta por el filo del espejo, la punza de alarma. La lengüetada se
+ha vuelto áspera, golosa, voraz.
+Lumila yergue la cabeza, en busca de algo que desmienta lo que está
+presintiendo. Se encuentra con unas fauces, unos ojos que la fuerzan a
+doblegarse y gemir:
+—Fiel, vos sos mi fiel… No me fallés, perrito.
+Pero más se le incendia la mirada al poderoso can.
+—¡No me hagás daño, Fielito!
+Se lo dice con espanto. Sumisa, como de rodillas.
+Página 322__
+
