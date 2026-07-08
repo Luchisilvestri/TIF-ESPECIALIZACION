@@ -1,74 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="ruta/al/esquema.rng" type="application/xml"schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Pez</title>
-        <author>Antonio Di Benedetto</author>
-        <respStmt>
-          <resp>Codificación en formato TEI-XML</resp>
-          <name><div Luciana="" Silvestri="">Luciana Silvestri</div></name>
-        </respStmt>
-      </titleStmt>
-      <publicationStmt>
-        <publisher>[Edición Privada]</publisher>
-        <date when="2026">2026</date>
-        <availability status="restricted">
-          <p>Texto protegido por derechos de autor. Uso exclusivo con fines académicos o de investigación.</p>
-        </availability>
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <analytic>
-            <title level="a">Pez</title>
-            <author>Di Benedetto, Antonio</author>
-          </analytic>
-          <monogr>
-            <title level="m">Cuentos completos</title>
-            <imprint>
-              <publisher>[Editorial del Corpus]</publisher>
-              <date>[Año de edición del corpus]</date>
-            </imprint>
-          </monogr>
-          <note>Publicado originalmente en el libro "Absurdos" (1978).</note>
-        </biblStruct>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Español</language>
-      </langUsage>
-    </profileDesc>
-  </teiHeader>
+<teiHeader>
+<fileDesc>
+    <titleStmt>
+      <title>Pez: Edición digital crítica</title>
+      <author>Antonio Di Benedetto</author>
+      
+      <editor role="compiler">Jimena Néspolo</editor>
+      <editor role="compiler">Julio Premat</editor>
+      
+      <respStmt>
+        <resp>Introducción de</resp>
+        <name>Julio Premat</name>
+      </respStmt>
+      
+      <respStmt>
+        <resp>Editor digital (ePub)</resp>
+        <name>diegoan</name>
+      </respStmt>
+      
+      <respStmt>
+        <resp>Codificación en TEI-XML por</resp>
+        <name>María Luciana Silvestri</name>
+      </respStmt>
+    </titleStmt>
+    
+    <editionStmt>
+      <edition>ePub base r2.1</edition>
+    </editionStmt>
+    
+    <extent>630 páginas</extent>
+    
+    <publicationStmt>
+      <authority>Trabajo final de Especialización UNTREF</authority>
+      <date>2026</date>
+      <availability>
+        <p>Texto codificado con fines exclusivamente académicos y de investigación.</p>
+      </availability>
+    </publicationStmt>
+    
+    <sourceDesc>
+      <biblStruct>
+        <analytic>
+          <title level="a">Pez</title>
+          <author>Antonio Di Benedetto</author>
+        </analytic>
+        
+        <monogr>
+          <title level="m">Cuentos completos</title>
+          <ref target="https://ww3.lectulandia.com/book/cuentos-completos-antonio-di-benedetto/"/>
+          <imprint>
+            <publisher>Lectulandia (ePub)</publisher>
+          </imprint>
+        </monogr>
+        
+        <relatedItem type="original">
+          <bibl>
+            <title level="m">Absurdos</title>
+            <date>1978</date>
+          </bibl>
+        </relatedItem>
+      </biblStruct>
+    </sourceDesc>
+  </fileDesc>
+  <particDesc>
+  <listPerson>
+    <person xml:id="lumila">
+        <persName>Lumila</persName>
+    </person>
+    
+    <person xml:id="gabriel">
+        <persName>Gabriel</persName>
+    </person>
 
-  <text>
-    <body>
-      <div type="cuento" xml:id="cuento_pez">
-        <head>Pez</head>
-         <pb n="X"/> 
+    <person xml:id="Fiel" role="animal">
+      <persName>Fiel (perro)</persName>
+    </person>
+    
+    </listPerson>
+    </particDesc>
+  <profileDesc>
+    <settingDesc>
+      <listPlace>
+        
+        <place xml:id="monte">
+          <placeName>El monte</placeName>
+          <desc>Espacio abierto y agreste donde habitan los animales salvajes.</desc>
+        </place>
+        
+        <place xml:id="rancho">
+          <placeName>El rancho</placeName>
+          <desc>Vivienda precaria de los personajes principales.</desc>
+        </place>
+        
+        <place xml:id="habitacion_principal">
+          <placeName>La <rs type="place" subtype="habitación principal">habitación</rs></placeName>
+          <desc>Espacio doméstico interior, foco de encierro o conflicto.</desc>
+        </place>
+        
+        <place xml:id="corral">
+          <placeName>El <rs type="place" subtype="corral">corral</rs></placeName>
+          <desc>Espacio de transición entre la casa y la naturaleza, límite del ganado.</desc>
+        </place>
+        
+        <place xml:id="jarillal_zona">
+        <placeName>Jarillal</placeName>
+        <desc>Ecosistema árido o semiárido dominado por arbustos de jarilla, característico del entorno natural del relato.</desc>
+        </place>
+  
+        <place xml:id="arenal_zona">
+        <placeName>Arenal</placeName>
+        <desc>Terreno desértico o acumulación de arena que dificulta el tránsito y refuerza la atmósfera hostil.</desc>
+        </place>
+      
+        </listPlace>
+    </settingDesc>
+  </profileDesc>
+</teiHeader>
+<text>
+  <body>
+    <div type="cuento" xml:id="cuento_pez">
+      
+      <space dim="vertical" extent="3" unit="lines" rend="blank-space"/>
+      <head rend="color: red; font-weight: bold;">Pez</head>
+      <pb n="X"/>
+    </div>
 
-        <div type="section" n="1"></div>
+    <div type="section" n="1">
                
-          <p>
-          Los susurros de la noche reculan, para <persName ref="#lumila">Lumila</persName>, y desaparecen. Se le hacen un 
-          vacío en la mente y se adormece. Por más que se enzarcen tenazmente en el 
-          <rs type="place" ref="#monte">monte</rs>, lancen bocadas como suspiros, o chirríen, o se parezcan a los lamentos 
-          y el peligro.
-          </p>
+      <p>
+      Los susurros de la noche reculan, para <persName ref="#lumila">Lumila</persName>, y desaparecen. Se le hacen un 
+      vacío en la mente y se adormece. Por más que se enzarcen tenazmente en el 
+      <rs type="place" ref="#monte">monte</rs>, lancen bocadas como suspiros, o chirríen, o se parezcan a los lamentos 
+      y el peligro.
+      </p>
         
-          <p>
-          Duerme bajo la noche, la <persName ref="#lumila">Lumila</persName>, un sueño ligero y frágil. Se le quiebra y 
-          le pone los ojos muy abiertos lo que le viene de adentro: el presentimiento. 
-          No vuelve su hombre. No es de fiar tanta ausencia.
-          </p>
+      <p>
+      Duerme bajo la noche, la <persName ref="#lumila">Lumila</persName>, un sueño ligero y frágil. Se le quiebra y 
+      le pone los ojos muy abiertos lo que le viene de adentro: el presentimiento. 
+      No vuelve su hombre. No es de fiar tanta ausencia.
+      </p>
         
-          <p>
-          Ya no dormirá, mientras no lo vea; se perece por verlo, aunque no 
-          aparezca sano… ni entero. Se retrae y se comprime ante este último 
-          pensamiento: que regrese, del <rs type="place" ref="#boliche">boliche del rancherío</rs> lejano, con algunos tajos 
-          en la cara o en el cuerpo.
-          </p>
+      <p>
+      Ya no dormirá, mientras no lo vea; se perece por verlo, aunque no 
+      aparezca sano… ni entero. Se retrae y se comprime ante este último 
+      pensamiento: que regrese, del <rs type="place" ref="#boliche">boliche del rancherío</rs> lejano, con algunos tajos 
+      en la cara o en el cuerpo.
+      </p>
 
           <p>
           Todo el silencio —que no es silencio, sino murmullos apelmazados 
