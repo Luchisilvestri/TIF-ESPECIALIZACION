@@ -906,7 +906,7 @@
           <persName ref="#lumila">Lumila</persName> yergue la cabeza, en busca de algo que desmienta lo que está 
           presintiendo. Se encuentra con unas fauces, unos ojos que la fuerzan a 
           doblegarse y gemir:
-          —<persName ref="#fiel">Fiel</persName>, vos sos mi fiel… No me fallés, <rs type="animal" subtype="dog" key="perro">perrito</rs>.
+          —<persName ref="#fiel">Fiel</persName>, vos sos mi fiel… No me fallés, <w type="animal" lemma="perro" ana="#diminutivo">perrito</w>.
           </p>
 
           <p>
