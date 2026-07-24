@@ -1,123 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="ruta/al/esquema.rng" type="application/xml"schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
 <teiHeader>
-<fileDesc>
+  <fileDesc>
+    
     <titleStmt>
-      <title>Pez: Edición digital crítica</title>
+      <title>Pez: Edición digital y codificación TEI</title>
       <author>Antonio Di Benedetto</author>
       
       <editor role="compiler">Jimena Néspolo</editor>
       <editor role="compiler">Julio Premat</editor>
-      
+  
+    <respStmt>
+       <resp>Introducción de</resp>
+       <name>Julio Premat</name>
+    </respStmt>
+
       <respStmt>
-        <resp>Introducción de</resp>
-        <name>Julio Premat</name>
-      </respStmt>
-      
-      <respStmt>
-        <resp>Editor digital (ePub)</resp>
+        <resp>Editor digital del ePub base</resp>
         <name>diegoan</name>
       </respStmt>
-      
+
       <respStmt>
         <resp>Codificación en TEI-XML por</resp>
-        <name>María Luciana Silvestri</name>
+        <name>Luciana</name>
       </respStmt>
     </titleStmt>
-    
+
     <editionStmt>
       <edition>ePub base r2.1</edition>
     </editionStmt>
-    
-    <extent>630 páginas</extent>
-    
+
+    <extent>680 páginas</extent>
+
     <publicationStmt>
-      <authority>Trabajo final de Especialización UNTREF</authority>
+      <authority>Proyecto de codificación TEI - Luciana</authority>
       <date>2026</date>
       <availability>
-        <p>Texto codificado con fines exclusivamente académicos y de investigación.</p>
+        <p>Texto codificado con fines de investigación y edición digital académica.</p>
       </availability>
     </publicationStmt>
-    
+
     <sourceDesc>
       <biblStruct>
+        
         <analytic>
           <title level="a">Pez</title>
           <author>Antonio Di Benedetto</author>
         </analytic>
-        
+
         <monogr>
           <title level="m">Cuentos completos</title>
           <ref target="https://ww3.lectulandia.com/book/cuentos-completos-antonio-di-benedetto/"/>
+
           <imprint>
-            <publisher>Lectulandia (ePub)</publisher>
+            <publisher>Adriana Hidalgo Editora</publisher>
+            <date>2006</date>
           </imprint>
         </monogr>
-        
+
         <relatedItem type="original">
           <bibl>
             <title level="m">Absurdos</title>
             <date>1978</date>
           </bibl>
         </relatedItem>
+
       </biblStruct>
     </sourceDesc>
-  </fileDesc>
-  <particDesc>
-  <listPerson>
-    <person xml:id="lumila">
-        <persName>Lumila</persName>
-    </person>
-    
-    <person xml:id="gabriel">
-        <persName>Gabriel</persName>
-    </person>
 
-    <person xml:id="Fiel" role="animal">
-      <persName>Fiel (perro)</persName>
-    </person>
-    
-    </listPerson>
-    </particDesc>
+  </fileDesc>
+
   <profileDesc>
+
+    <particDesc>
+      <listPerson>
+        <person xml:id="lumila">
+          <persName>Lumila</persName>
+        </person>
+
+        <person xml:id="gabriel">
+          <persName>Gabriel</persName>
+        </person>
+
+        <person xml:id="Fiel" role="animal">
+          <persName>Fiel (perro)</persName>
+        </person>
+      </listPerson>
+    </particDesc>
+
     <settingDesc>
       <listPlace>
-        
         <place xml:id="monte">
           <placeName>El monte</placeName>
           <desc>Espacio abierto y agreste donde habitan los animales salvajes.</desc>
         </place>
-        
+
         <place xml:id="rancho">
           <placeName>El rancho</placeName>
           <desc>Vivienda precaria de los personajes principales.</desc>
         </place>
-        
+
         <place xml:id="habitacion_principal">
-          <placeName>La <rs type="place" subtype="habitación principal">habitación</rs></placeName>
+          <placeName>La habitación principal</placeName>
           <desc>Espacio doméstico interior, foco de encierro o conflicto.</desc>
         </place>
-        
+
         <place xml:id="corral">
-          <placeName>El <rs type="place" subtype="corral">corral</rs></placeName>
+          <placeName>El corral</placeName>
           <desc>Espacio de transición entre la casa y la naturaleza, límite del ganado.</desc>
         </place>
-        
+
         <place xml:id="jarillal_zona">
-        <placeName>Jarillal</placeName>
-        <desc>Ecosistema árido o semiárido dominado por arbustos de jarilla, característico del entorno natural del relato.</desc>
+          <placeName>Jarillal</placeName>
+          <desc>Ecosistema árido o semiárido dominado por arbustos de jarilla, característico del entorno natural del relato.</desc>
         </place>
-  
+
         <place xml:id="arenal_zona">
-        <placeName>Arenal</placeName>
-        <desc>Terreno desértico o acumulación de arena que dificulta el tránsito y refuerza la atmósfera hostil.</desc>
+          <placeName>Arenal</placeName>
+          <desc>Terreno desértico o acumulación de arena que dificulta el tránsito y refuerza la atmósfera hostil.</desc>
         </place>
-      
-        </listPlace>
+      </listPlace>
     </settingDesc>
+
+    <textClass>
+      <keywords scheme="#glosario_cuyano">
+        <list type="gloss">
+          <item>
+            <term xml:id="term_jarilla">Jarilla</term>: 
+            Arbusto ramoso de la familia de las zigofiláceas, de madera dura y resinosa, propio de zonas áridas.
+          </item>
+          <item>
+            <term xml:id="term_zonda">Zonda</term>: 
+            Viento cálido y seco que sopla en el sotavento de la cordillera de los Andes.
+          </item>
+        </list>
+      </keywords>
+    </textClass>
+
   </profileDesc>
 </teiHeader>
+
 <text>
   <body>
     <div type="cuento" xml:id="cuento_pez">
@@ -149,99 +172,99 @@
       en la cara o en el cuerpo.
       </p>
 
-          <p>
-          Todo el silencio —que no es silencio, sino murmullos apelmazados 
-          para su conciencia, porque no llegan los sonidos que ella aguarda⁠— se apelotona y 
-          se le hace como una bola que le estorba en el vientre.
-          </p>
+      <p>
+      Todo el silencio —que no es silencio, sino murmullos apelmazados 
+      para su conciencia, porque no llegan los sonidos que ella aguarda⁠— se apelotona y 
+      se le hace como una bola que le estorba en el vientre.
+      </p>
 
-          <p>
-          Tiene ganas de llorar, en estas altas horas más que nunca, pero se frena, 
-          atenta a oír, porque aun a distancia la consolará cualquier indicio del jinete. 
-          No tiene que adivinar la naturaleza de los ruidos, sin esmero los descifra 
-          todos, de las <rs type="animal">aves</rs> y las <rs type="animal">alimañnas</rs>, o del aire. Busca quedarse en blanco de 
-          ellos, para filtrar el que le conviene. Busca recobrar memorias agradables, 
-          para distraerse, y las comunes, y se acuerda de otro terror de la infancia: el 
-          <rs type="animal">pájaro</rs> enorme con cuerpo de <rs type="animal">pez</rs>.
-          </p>
+      <p>
+      Tiene ganas de llorar, en estas altas horas más que nunca, pero se frena, 
+      atenta a oír, porque aun a distancia la consolará cualquier indicio del jinete. 
+      No tiene que adivinar la naturaleza de los ruidos, sin esmero los descifra 
+      todos, de las <rs type="animal">aves</rs> y las <rs type="animal">alimañnas</rs>, o del aire. Busca quedarse en blanco de 
+      ellos, para filtrar el que le conviene. Busca recobrar memorias agradables, 
+      para distraerse, y las comunes, y se acuerda de otro terror de la infancia: el 
+      <rs type="animal">pájaro</rs> enorme con cuerpo de <rs type="animal">pez</rs>.
+      </p>
 
-          <p>
-          <said who="#gabriel">—Y sin patas</said> —suele comentar su hombre, que asegura haberlo visto.
-          </p>
+      <p>
+      <said who="#gabriel">—Y sin patas</said> —suele comentar su hombre, que asegura haberlo visto.
+      </p>
 
-          <p>
-          <said who="#Lumila">—¿Y cómo hace para posarse?</said> —⁠ella ha porfiado siempre, esperanzada 
-          en que sea falso que ese <rs type="animal">monstruo</rs> existe.
-          </p>
+      <p>
+      <said who="#Lumila">—¿Y cómo hace para posarse?</said> —⁠ella ha porfiado siempre, esperanzada 
+      en que sea falso que ese <rs type="animal">monstruo</rs> existe.
+      </p>
 
-          <p>
-          <said who="#gabriel">—Se posa en el agua.</said>
-          </p>
+      <p>
+      <said who="#gabriel">—Se posa en el agua.</said>
+      </p>
 
-          <p>
-          <said who="#Lumila">—Por aquí no hay agua.</said>
-          </p>
+      <p>
+      <said who="#Lumila">—Por aquí no hay agua.</said>
+      </p>
 
-          <p>
-          <said who="#gabriel">—Antes la había, grande como el mar.</said>
-          </p>
+      <p>
+      <said who="#gabriel">—Antes la había, grande como el mar.</said>
+      </p>
 
-          <p>
-          <said who="#Lumila">—Pero si no eras nacido, Gabriel…</said>
-          </p>
+      <p>
+      <said who="#Lumila">—Pero si no eras nacido, Gabriel…</said>
+      </p>
 
-          <p>
-          Acorralado, porque jamás logra establecer si vio al <rs type="animal">pájaro</rs>, lo soñó o es de 
-          oídas que lo describe, el hombre reargumenta:
-          </p>
+      <p>
+      Acorralado, porque jamás logra establecer si vio al <rs type="animal">pájaro</rs>, lo soñó o es de 
+      oídas que lo describe, el hombre reargumenta:
+      </p>
 
-          <p>
-          <said who="#gabriel">—Asienta en la arena lisa, todo esto que fue el fondo del agua grande.</said>
-          </p>
+      <p>
+      <said who="#gabriel">—Asienta en la arena lisa, todo esto que fue el fondo del agua grande.</said>
+      </p>
 
-          <p>
-          El oído entrenado de la <persName ref="#lumila">Lumila</persName> no podría distinguir, tal vez, el asentarse 
-          de los <rs type="animal" subtype="part">cascos</rs> del <rs type="animal" subtype="collective">caballaje</rs> que está volviendo, acallado por el manto de arena, 
-          si no fuera porque las herraduras se dan constantemente con las <rs type="animal" subtype="remains">conchillas de 
-          moluscos</rs>, que rapizan de blanco, matizado de celeste, vastas extensiones de 
-          eso que, dicen, fue mar, y es donde el matrimonio anidó su pobreza.
-          </p>
+      <p>
+      El oído entrenado de la <persName ref="#lumila">Lumila</persName> no podría distinguir, tal vez, el asentarse 
+      de los <rs type="animal" subtype="part">cascos</rs> del <rs type="animal" subtype="collective">caballaje</rs> que está volviendo, acallado por el manto de arena, 
+      si no fuera porque las herraduras se dan constantemente con las <rs type="animal" subtype="remains">conchillas de 
+      moluscos</rs>, que rapizan de blanco, matizado de celeste, vastas extensiones de 
+      eso que, dicen, fue mar, y es donde el matrimonio anidó su pobreza.
+      </p>
 
-          <p>
-          El <rs type="animal">caballo</rs> se detiene. Merman para <persName ref="#lumila">Lumila</persName> las referencias, y pasa rato. 
-          ¿Ha venido solo…? ¿Se ha desgraciado <persName ref="#gabriel">Gabriel</persName>…? Espera, mordiendo el 
-          borde de la sábana. <persName ref="#lumila">Lumila</persName> no puede salir a ver con sus ojos, está anudada a la 
-          cama.
-          </p>
+      <p>
+      El <rs type="animal">caballo</rs> se detiene. Merman para <persName ref="#lumila">Lumila</persName> las referencias, y pasa rato. 
+      ¿Ha venido solo…? ¿Se ha desgraciado <persName ref="#gabriel">Gabriel</persName>…? Espera, mordiendo el 
+      borde de la sábana. <persName ref="#lumila">Lumila</persName> no puede salir a ver con sus ojos, está anudada a la 
+      cama.
+      </p>
 
-          <p>
-          El <rs type="animal">animal</rs> suelta un relincho prudente, que a la <persName ref="#lumila">Lumila</persName> le confunde las 
-          impresiones: parece relincho de alertar a los de la <rs type="place" ref="#casa">casa</rs>, o de sentirse solo y 
-          llamar a la gente habitual; también, por fortuna, semeja un modo de 
-          despabilar al que lo monta y avisarle que han llegado a destino.
-          </p>
+      <p>
+      El <rs type="animal">animal</rs> suelta un relincho prudente, que a la <persName ref="#lumila">Lumila</persName> le confunde las 
+      impresiones: parece relincho de alertar a los de la <rs type="place" ref="#casa">casa</rs>, o de sentirse solo y 
+      llamar a la gente habitual; también, por fortuna, semeja un modo de 
+      despabilar al que lo monta y avisarle que han llegado a destino.
+      </p>
 
-          <p>
-          Después, un ruido seco de fardo que cae (o de cuerpo muerto que se 
-          derrumba). Para <persName ref="#lumila">Lumila</persName> subsiste la espera, aún, pero más desesperada. Porque 
-          ella imagina que le mataron al hombre, lo cruzaron sobre la montura y 
-          soltaron la <rs type="animal">bestia</rs> seguros de que enfilaría al corral. 
-          </p>
+      <p>
+      Después, un ruido seco de fardo que cae (o de cuerpo muerto que se 
+      derrumba). Para <persName ref="#lumila">Lumila</persName> subsiste la espera, aún, pero más desesperada. Porque 
+      ella imagina que le mataron al hombre, lo cruzaron sobre la montura y 
+      soltaron la <rs type="animal">bestia</rs> seguros de que enfilaría al corral. 
+      </p>
 
-          <p>
-          Todavía se intriga, porque no puede acudir a indagar con su propia 
-          mirada.
-          </p>
+      <p>
+      Todavía se intriga, porque no puede acudir a indagar con su propia 
+      mirada.
+      </p>
 
-          <p>
-          Más rato y, tras algunos sonidos precursores, el amo del <rs type="place" ref="#casa">hogar</rs>, medio 
-          piltrafa el porte, se encuadra en el vano de la puerta, cara turbia frente al 
-          resplandor sereno de la candela.
-          </p>
+      <p>
+      Más rato y, tras algunos sonidos precursores, el amo del <rs type="place" ref="#casa">hogar</rs>, medio 
+      piltrafa el porte, se encuadra en el vano de la puerta, cara turbia frente al 
+      resplandor sereno de la candela.
+      </p>
 
-          <p>
-          Para <persName ref="#lumila">Lumila</persName> vienen juntos un lloro rabón y consolado y una sensación que 
-          de una sola olida —⁠ha irrumpido un vaho de alcohol en la atmósfera⁠— le 
+      <p>
+      Para <persName ref="#lumila">Lumila</persName> vienen juntos un lloro rabón y consolado y una sensación que 
+      de una sola olida —⁠ha irrumpido un vaho de alcohol en la atmósfera⁠— le 
           hace proferir el reniego de: <said who="#Lumila">«¡Jiede…!»</said>.
           </p>
 
