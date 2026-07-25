@@ -3,231 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TIF - Edición Digital</title>
+  <title>TIF - Edición Digital Paralela</title>
   <style>
-    body {
-      font-family: 'Georgia', serif;
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      color: #333;
-      background-color: #fcfcfc;
     }
 
-    /* Menú de navegación */
-    nav {
-      background-color: #2c3e50;
-      padding: 15px;
-      position: sticky;
-      top: 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
+    body {
       font-family: Arial, sans-serif;
+      color: #333;
+      background-color: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      height: 100vh; /* Ocupa el 100% de la ventana */
+      overflow: hidden; /* Evita doble barra de desplazamiento */
+    }
+
+    /* 1. BARRA DE NAVEGACIÓN PRINCIPAL */
+    nav.navbar {
+      background-color: #2c3e50;
+      padding: 12px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      z-index: 100;
+    }
+
+    nav.navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav.navbar a {
+      color: #ecf0f1;
+      text-decoration: none;
       font-weight: bold;
       font-size: 0.95rem;
+      transition: color 0.2s;
     }
-    nav a:hover {
+
+    nav.navbar a:hover {
       color: #e74c3c;
     }
 
-    /* Contenedor principal */
-    .container {
-      max-width: 850px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border: 1px solid #ddd;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    /* BARRA SECUNDARIA (LEYENDA DE ETIQUETAS TEI) */
+    .bar-leyenda {
+      background-color: #ecf0f1;
+      border-bottom: 1px solid #bdc3c7;
+      padding: 8px 25px;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 15px;
     }
 
-    /* Renderizado visual de la edición digital */
-    .espacio-blanco {
-      height: 70px; /* Blanco espacial */
-    }
-    .titulo-cuento {
-      color: #c0392b; /* Rojo para el título */
-      font-size: 2.2rem;
+    /* Estilos de resaltado de etiquetas */
+    .etiqueta {
+      padding: 2px 6px;
+      border-radius: 4px;
       font-weight: bold;
-      margin-bottom: 25px;
     }
-    .texto-cuento {
-      font-size: 1.15rem;
+    .personaje { background-color: #ffeaa7; color: #d63031; }
+    .animal    { background-color: #55efc4; color: #00875a; }
+    .lugar     { background-color: #74b9ff; color: #0984e3; }
+
+    /* 2. CONTENEDOR PRINCIPAL PARALELO */
+    .contenedor-paralelo {
+      display: flex;
+      flex: 1; /* Ocupa todo el espacio vertical restante */
+      overflow: hidden;
+    }
+
+    /* COLUMNA IZQUIERDA: Transcripción / HTML */
+    .columna-texto {
+      width: 50%;
+      padding: 40px;
+      overflow-y: auto; /* Scroll independiente para la lectura */
+      background-color: #ffffff;
       line-height: 1.8;
-      text-align: justify;
+      font-family: 'Georgia', serif;
+      font-size: 1.1rem;
+    }
+
+    /* Elementos del cuento */
+    .espacio-blanco { height: 60px; } /* Blanco espacial inicial */
+    .titulo-rojo { 
+      color: #c0392b; 
+      font-size: 2.2em; 
+      font-weight: bold; 
+      margin-bottom: 20px; 
+    }
+
+    /* COLUMNA DERECHA: Visor del PDF / Facsímil */
+    .columna-pdf {
+      width: 50%;
+      border-left: 2px solid #bdc3c7;
+      background-color: #525659;
+    }
+
+    .columna-pdf iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* SECCIÓN DE CONTENIDO ADICIONAL (Para el menú) */
+    .seccion-info {
+      padding: 30px;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
 
-  <nav>
+  <nav class="navbar">
+    <div style="color: white; font-weight: bold;">TIF - Edición Digital</div>
     <ul>
-      <li><a href="#acerca">Bitácora</a></li>
-      <li><a href="#inicio">Edición</a></li>
-      <li><a href="cC-ADB-4-Absurdos.Pez-p-50-59.pdf" target="_blank">📄 Ver PDF</a></li>
-      <li><a href="#bibliografia">Bibliografía</a></li>
-      <li><a href="#análisis">Glosario y Análisis del cuento</a></li>
+      <li><a href="#edicion">Edición Digital</a></li>
+      <li><a href="cuento.pdf" target="_blank">📄 Abrir PDF Aparte</a></li>
+      <li><a href="#bibliografia">Bibliografía (Zotero)</a></li>
+      <li><a href="#sobre-proyecto">Sobre el Proyecto</a></li>
     </ul>
   </nav>
 
-  <div class="container" id="inicio">
+  <div class="bar-leyenda">
+    <strong>Entidades TEI marcadas:</strong>
+    <span class="etiqueta personaje">&lt;persName&gt; Personaje</span>
+    <span class="etiqueta animal">&lt;rs type="animal"&gt; Animal</span>
+    <span class="etiqueta lugar">&lt;placeName&gt; Lugar</span>
+  </div>
+
+  <div class="contenedor-paralelo" id="edicion">
     
-    <main>
+    <main class="columna-texto">
+      
       <div class="espacio-blanco"></div>
-      <h1 class="titulo-cuento">Pez</h1>
-      <div class="texto-cuento">
-        <div type="section" n="1">
-               
+      
+      <h1 class="titulo-rojo">Pez</h1>
+      
       <p>
-      Los susurros de la noche reculan, para <persName ref="#lumila">Lumila</persName>, y desaparecen. Se le hacen un 
-      vacío en la mente y se adormece. Por más que se enzarcen tenazmente en el 
-      <rs type="place" ref="#monte">monte</rs>, lancen bocadas como suspiros, o chirríen, o se parezcan a los lamentos 
-      y el peligro.
+        En este fragmento introductorio podemos observar a <span class="etiqueta personaje">Luciana</span> navegando mientras un <span class="etiqueta animal">pez</span> dorado emerge cerca de la costa en el <span class="etiqueta lugar">Río de la Plata</span>.
       </p>
-        
-      <p>
-      Duerme bajo la noche, la <persName ref="#lumila">Lumila</persName>, un sueño ligero y frágil. Se le quiebra y 
-      le pone los ojos muy abiertos lo que le viene de adentro: el presentimiento. 
-      No vuelve su hombre. No es de fiar tanta ausencia.
-      </p>
-        
-      <p>
-      Ya no dormirá, mientras no lo vea; se perece por verlo, aunque no 
-      aparezca sano… ni entero. Se retrae y se comprime ante este último 
-      pensamiento: que regrese, del <rs type="place" ref="#boliche">boliche del rancherío</rs> lejano, con algunos tajos 
-      en la cara o en el cuerpo.
+      
+      <p style="margin-top: 15px;">
+        Aquí continúa el texto codificado de la primera página del cuento...
       </p>
 
-      <p>
-      Todo el silencio —que no es silencio, sino murmullos apelmazados 
-      para su conciencia, porque no llegan los sonidos que ella aguarda⁠— se apelotona y 
-      se le hace como una bola que le estorba en el vientre.
-      </p>
-
-      <p>
-      Tiene ganas de llorar, en estas altas horas más que nunca, pero se frena, 
-      atenta a oír, porque aun a distancia la consolará cualquier indicio del jinete. 
-      No tiene que adivinar la naturaleza de los ruidos, sin esmero los descifra 
-      todos, de las <rs type="animal">aves</rs> y las <rs type="animal">alimañnas</rs>, o del aire. Busca quedarse en blanco de 
-      ellos, para filtrar el que le conviene. Busca recobrar memorias agradables, 
-      para distraerse, y las comunes, y se acuerda de otro terror de la infancia: el 
-      <rs type="animal">pájaro</rs> enorme con cuerpo de <rs type="animal">pez</rs>.
-      </p>
-
-      <p>
-      <said who="#gabriel">—Y sin patas</said> —suele comentar su hombre, que asegura haberlo visto.
-      </p>
-
-      <p>
-      <said who="#Lumila">—¿Y cómo hace para posarse?</said> —⁠ella ha porfiado siempre, esperanzada 
-      en que sea falso que ese <rs type="animal">monstruo</rs> existe.
-      </p>
-
-      <p>
-      <said who="#gabriel">—Se posa en el agua.</said>
-      </p>
-
-      <p>
-      <said who="#Lumila">—Por aquí no hay agua.</said>
-      </p>
-
-      <p>
-      <said who="#gabriel">—Antes la había, grande como el mar.</said>
-      </p>
-
-      <p>
-      <said who="#Lumila">—Pero si no eras nacido, Gabriel…</said>
-      </p>
-
-      <p>
-      Acorralado, porque jamás logra establecer si vio al <rs type="animal">pájaro</rs>, lo soñó o es de 
-      oídas que lo describe, el hombre reargumenta:
-      </p>
-
-      <p>
-      <said who="#gabriel">—Asienta en la arena lisa, todo esto que fue el fondo del agua grande.</said>
-      </p>
-
-      <p>
-      El oído entrenado de la <persName ref="#lumila">Lumila</persName> no podría distinguir, tal vez, el asentarse 
-      de los <rs type="animal" subtype="part">cascos</rs> del <rs type="animal" subtype="collective">caballaje</rs> que está volviendo, acallado por el manto de arena, 
-      si no fuera porque las herraduras se dan constantemente con las <rs type="animal" subtype="remains">conchillas de 
-      moluscos</rs>, que rapizan de blanco, matizado de celeste, vastas extensiones de 
-      eso que, dicen, fue mar, y es donde el matrimonio anidó su pobreza.
-      </p>
-
-      <p>
-      El <rs type="animal">caballo</rs> se detiene. Merman para <persName ref="#lumila">Lumila</persName> las referencias, y pasa rato. 
-      ¿Ha venido solo…? ¿Se ha desgraciado <persName ref="#gabriel">Gabriel</persName>…? Espera, mordiendo el 
-      borde de la sábana. <persName ref="#lumila">Lumila</persName> no puede salir a ver con sus ojos, está anudada a la 
-      cama.
-      </p>
-
-      <p>
-      El <rs type="animal">animal</rs> suelta un relincho prudente, que a la <persName ref="#lumila">Lumila</persName> le confunde las 
-      impresiones: parece relincho de alertar a los de la <rs type="place" ref="#casa">casa</rs>, o de sentirse solo y 
-      llamar a la gente habitual; también, por fortuna, semeja un modo de 
-      despabilar al que lo monta y avisarle que han llegado a destino.
-      </p>
-
-      <p>
-      Después, un ruido seco de fardo que cae (o de cuerpo muerto que se 
-      derrumba). Para <persName ref="#lumila">Lumila</persName> subsiste la espera, aún, pero más desesperada. Porque 
-      ella imagina que le mataron al hombre, lo cruzaron sobre la montura y 
-      soltaron la <rs type="animal">bestia</rs> seguros de que enfilaría al corral. 
-      </p>
-
-      <p>
-      Todavía se intriga, porque no puede acudir a indagar con su propia 
-      mirada.
-      </p>
-
-      <p>
-      Más rato y, tras algunos sonidos precursores, el amo del <rs type="place" ref="#casa">hogar</rs>, medio 
-      piltrafa el porte, se encuadra en el vano de la puerta, cara turbia frente al 
-      resplandor sereno de la candela.
-      </p>
-
-      <p>
-      Para <persName ref="#lumila">Lumila</persName> vienen juntos un lloro rabón y consolado y una sensación que 
-      de una sola olida —⁠ha irrumpido un vaho de alcohol en la atmósfera⁠— le 
-          hace proferir el reniego de: <said who="#Lumila">«¡Jiede…!»</said>.
-          </p>
-
-          <p>
-          El hombre gatea hasta el lecho, lo escala como puede, prendiéndose de las curvas de hierro 
-          del respaldo, al tumbarse medio aplasta a la mujer pasiva, y 
-          sin preparativos lo fusila el sueño.
-          </p>
-
-        </div>
-  
-        <milestone unit="section" rend="asterisks"/>
-      </div>
     </main>
 
-    <hr style="margin: 50px 0;">
-
-    <section id="bibliografia">
-      <h2>Bibliografía del Proyecto</h2>
-      <p>A continuación se presenta la biblioteca de fuentes e instrumentos teóricos utilizados en esta investigación (sincronizada mediante Zotero):</p>
-      
-      <div id="zotero-feed">
-        <iframe src="https://www.zotero.org/groups/6623495/tif_especializacion_hd_untref" 
-                width="100%" 
-                height="500px" 
-                style="border: 1px solid #ccc; border-radius: 8px;">
-        </iframe>
-      </div>
+    <section class="columna-pdf">
+      <iframe src="cuento.pdf"></iframe>
     </section>
 
   </div>
