@@ -302,13 +302,15 @@
     }
 
     /* PESTAÑA ZOTERO Y GLOSARIO */
-    .container-zotero {
+    .container-seccion {
       max-width: 950px;
       margin: 25px auto;
       padding: 30px;
       background: white;
       width: 100%;
       border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      line-height: 1.7;
     }
   </style>
 </head>
@@ -319,7 +321,7 @@
     <ul>
       <li><a class="nav-link active" onclick="mostrarPestana('inicio', this)">Inicio / Autor</a></li>
       <li><a class="nav-link" onclick="mostrarPestana('edicion', this)">Edición Paralela ("Pez")</a></li>
-      <li><a class="nav-link" onclick="mostrarPestana('Glosario', this)">Glosario</a></li>
+      <li><a class="nav-link" onclick="mostrarPestana('glosario', this)">Glosario</a></li>
       <li><a class="nav-link" onclick="mostrarPestana('bibliografia', this)">Bibliografía (Zotero)</a></li>
     </ul>
   </nav>
@@ -460,7 +462,7 @@
             </p>
           </div>
 
-          <div id="hoja-tei-2" class="hoja-tei">
+          <div id="hoja-tei-2" class="hoja-tei active">
              <p>
              <said who="#gabriel">—Asienta en la arena lisa, todo esto que fue el fondo del agua grande.</said>
              </p>
@@ -626,10 +628,8 @@
         </div>
         
         <div id="hoja-tei-4" class="hoja-tei active">
-  
-        <div type="section" n="4">
-           
-          <milestone unit="section" rend="asterisks"/>
+          <div type="section" n="4">
+           <milestone unit="section" rend="asterisks"/>
             <p>
           <persName ref="#lumila">Lumila</persName> ha descuidado sus necesidades más íntimas, que ahora se le 
           manifiestan, exigentes y perentorias por haber sido postergadas.
@@ -707,11 +707,12 @@
           —Tiene que ser por miedo… Miedo al dijunto, aunque sea mi hombre. El 
           miedo mata y me mató la pierna que me quedaba sana.
           </p>
+        </div>
       </div>
 
-        <div id="hoja-tei-5" class="hoja-tei">
+      <div id="hoja-tei-5" class="hoja-tei">
           <p>
- Necesita ver algo viviente en su cercanía, junto a ella. Llama a los <rs type="animal">canes</rs>:
+           Necesita ver algo viviente en su cercanía, junto a ella. Llama a los <rs type="animal">canes</rs>:
           —<name type="dog">Fiel</name>, <name type="dog">Lión</name>, <name type="dog">Capú</name>.
           </p>
 
@@ -761,13 +762,13 @@
           sea cuando éstos duermen, y quizás el ánima de <persName ref="#gabriel">Gabriel</persName> puede avisarle al hijo 
           que ella está sola y lo necesita desesperadamente… ¿Puede…?
           </p>
-        
-        </div>
+      </div>
 
         <milestone unit="section" rend="asterisks"/>
-  
+        
         <div type="section" n="5">
-           <p>
+        
+          <p>
           Contra lo que calculaba, la noche no le agranda los terrores.
           </p>
 
@@ -777,9 +778,10 @@
           remedio; pero no lo siente, o más bien ya lo siente, o quiere sentirlo, ajeno, y 
           evita rozarlo.
           </p>
+
         </div>
 
-      <div id="hoja-tei-6" class="hoja-tei">
+      <div id="hoja-tei-6" class="hoja-tei active">
           <p>
           Sin embargo, como una culpa recuerda que no le ha dado un beso de adiós 
           en la frente. Se dispensa, hablando a alguien que no es él:
@@ -839,7 +841,7 @@
         
         </div>
 
-        <div id="hoja-tei-7" class="hoja-tei">
+        <div id="hoja-tei-7" class="hoja-tei activa">
           <p>
             Grita. Necesita gritar.
           </p>
@@ -921,6 +923,7 @@
           Viene, sí, y no convocado por voluntad humana alguna, el Zonda, el 
           viento malo, caliente y terroso.
           </p>
+          
           <p>
           Zumba, danza y manotea, arroja sus aires cargados de polvo y arena, 
           destroza los brotes y ramas. En la inmensidad, se afana en sacudir los <rs type="place" ref="#rancho">ranchos</rs> 
@@ -929,11 +932,12 @@
         
         </div>
 
-        <div id="hoja-tei-8" class="hoja-tei">
+        <div id="hoja-tei-8" class="hoja-tei active">
           <p>
           ante adversidades tales pueden fortificarse entre sí. Los cala, les vuela los 
           techos.
           </p>
+
           <p>
           En el puesto de <persName ref="#lumila">Lumila</persName> es peor. La puerta de la habitación quedó abierta 
           desde que regresó <persName ref="#gabriel">Gabriel</persName>. Ella no podrá cerrarla.
@@ -1020,7 +1024,7 @@
                   
         </div>
 
-        <div id="hoja-tei-9" class="hoja-tei">
+        <div id="hoja-tei-9" class="hoja-tei active">
          <p>
           de que donde hay gente se producen sobras de comida, a veces.
           </p>
@@ -1048,9 +1052,7 @@
           </p>
 
         </div>
-  
         <milestone unit="section" rend="asterisks"/>
-  
         <div type="section" n="8">
 
           <p>
@@ -1077,7 +1079,8 @@
           Decide que se presentará un anciano, que el anciano le concederá el bien 
           que ha pedido.
           </p>
-<p>
+          
+          <p>
           Se figura el rostro, radiante como chorros de sol, y con la belleza pura de 
           los ojos zarcos.
           </p>
@@ -1099,9 +1102,9 @@
         
         </div>
 
-        <div id="hoja-tei-10" class="hoja-tei">
+        <div id="hoja-tei-10" class="hoja-tei active">
           <p>
-            con cuidado esa primera ocasión en su vida de darse con el monstruo de 
+          con cuidado esa primera ocasión en su vida de darse con el monstruo de 
           tantas mentas.
           </p>
 
@@ -1188,42 +1191,29 @@
 
       </main>
 
-      <section class="columna-pdf">
+      <aside class="columna-pdf">
         <div class="selector-paginas">
+          <span>Vista Facsimilar (PDF)</span>
           <div class="nav-paginas-btns">
-            <button id="btn-prev" onclick="cambiarPaginaRelativa(-1)">← Hoja Anterior</button>
-            <button id="btn-next" onclick="cambiarPaginaRelativa(1)">Hoja Siguiente →</button>
-          </div>
-          <div>
-            <label for="select-hoja"><strong>Ir a:</strong></label>
-            <select id="select-hoja" onchange="irAPagina(parseInt(this.value))">
-              <option value="1">Hoja 1 (PDF)</option>
-              <option value="2">Hoja 2 (PDF)</option>
-              <option value="3">Hoja 3 (PDF)</option>
-              <option value="4">Hoja 4 (PDF)</option>
-              <option value="5">Hoja 5 (PDF)</option>
-              <option value="6">Hoja 6 (PDF)</option>
-              <option value="7">Hoja 7 (PDF)</option>
-              <option value="8">Hoja 8 (PDF)</option>
-              <option value="9">Hoja 9 (PDF)</option>
-              <option value="10">Hoja 10 (PDF)</option>
-            </select>
+            <button disabled>« Ant.</button>
+            <button>Sig. »</button>
           </div>
         </div>
-        <iframe id="visor-pdf" src="cuento PEZ/hoja1.pdf"></iframe>
-      </section>
+        <iframe src="about:blank" title="Visor PDF"></iframe>
+      </aside>
 
     </div>
   </div>
 
-  <div id="Glosario" class="tab-content">
-    <div class="container-inicio">
+  <div id="glosario" class="tab-content">
+    <div class="container-seccion">
       <h2>Glosario de Términos</h2>
       <p>Proyección del repositorio digital para el corpus narrativo de Antonio Di Benedetto.</p>
     </div>
+  </div>
 
   <div id="bibliografia" class="tab-content">
-    <div class="container-zotero">
+    <div class="container-seccion">
       <h2>Bibliografía del Proyecto</h2>
       <p>Biblioteca de referencia sobre Di Benedetto y la edición digital crítica:</p>
       <br>
@@ -1232,44 +1222,26 @@
   </div>
 
   <script>
-    let paginaActual = 1;
-    const totalPaginas = 3;
+    function mostrarPestana(idPestana, enlace) {
+      // Ocultar todas las pestañas
+      const contenidos = document.querySelectorAll('.tab-content');
+      contenidos.forEach(tab => tab.classList.remove('active'));
 
-    function mostrarPestana(idPestana, elemento) {
-      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-      document.querySelectorAll('.nav-link').forEach(b => b.classList.remove('active'));
-      document.getElementById(idPestana).classList.add('active');
-      elemento.classList.add('active');
-    }
+      // Desactivar el estado 'active' de todos los enlaces del menú
+      const enlaces = document.querySelectorAll('nav.navbar a');
+      enlaces.forEach(link => link.classList.remove('active'));
 
-    function irAPagina(numPagina) {
-      if (numPagina < 1 || numPagina > totalPaginas) return;
-      paginaActual = numPagina;
-
-      // 1. Mostrar texto TEI de la hoja actual
-      document.querySelectorAll('.hoja-tei').forEach(h => h.classList.remove('active'));
-      const hojaActiva = document.getElementById(`hoja-tei-${paginaActual}`);
-      if (hojaActiva) {
-        hojaActiva.classList.add('active');
+      // Mostrar la pestaña seleccionada
+      const pestanaDestino = document.getElementById(idPestana);
+      if (pestanaDestino) {
+        pestanaDestino.classList.add('active');
       }
 
-      // 2. Cambiar archivo PDF en el visor
-      document.getElementById('visor-pdf').src = `cuento PEZ/hoja${paginaActual}.pdf`;
-
-      // 3. Sincronizar selector
-      document.getElementById('select-hoja').value = paginaActual;
-
-      // 4. Estado botones
-      document.getElementById('btn-prev').disabled = (paginaActual === 1);
-      document.getElementById('btn-next').disabled = (paginaActual === totalPaginas);
+      // Activar el enlace seleccionado
+      if (enlace) {
+        enlace.classList.add('active');
+      }
     }
-
-    function cambiarPaginaRelativa(delta) {
-      irAPagina(paginaActual + delta);
-    }
-
-    // Inicialización al cargar
-    irAPagina(1);
   </script>
 
 </body>
