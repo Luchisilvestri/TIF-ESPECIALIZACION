@@ -190,7 +190,7 @@
       de las <rs type="animal">aves</rs> y las <rs type="animal">alimañas</rs>, o del aire. Busca quedarse en blanco de 
       ellos, para filtrar el que le conviene. Busca recobrar memorias agradables, 
       para distraerse, y las comunes, y se acuerda de otro <rs type="emotion" key="terror">terror</rs> de la infancia: el 
-      <rs type="animal">pájaro</rs> enorme con cuerpo de <rs type="animal">pez</rs>.
+      <rs type="animal">pájaro</rs> enorme con y <rs type="animal" subtype="part">cuerpo</rs> de <rs type="animal">pez</rs>.
       </p>
 
       <p>
@@ -345,7 +345,7 @@
           </p>
 
           <p>
-          Las <rs type="animal">gallinas</rs> y el <rs type="animal">pavo</rs> están en su rutina, afanado el pico en abatir <rs type="animal" subtype="insect">insectos</rs> 
+          Las <rs type="animal">gallinas</rs> y el <rs type="animal">pavo</rs> están en su rutina, afanado el <rs type="animal" subtype="part">pico</rs> en abatir <rs type="animal" subtype="insect">insectos</rs> 
           y deshebrar raíces.
           </p>
 
@@ -422,9 +422,9 @@
           </p>
 
           <p>
-          <said who="#lumila" aloud="false" direct="false">Se pregunta si está muriendo por partes</said> 
-          y se mira la <rs type="human" subtype="part">mano</rs> 
-          que todavía le sirve, con prevención de que también se invalide.
+           <said who="#lumila" aloud="false" direct="false">Se pregunta si está muriendo por partes</said> 
+           y se mira la <rs type="human" subtype="part">mano</rs> que todavía le sirve, 
+           con prevención de que también se invalide.
           </p>
 
           <p>
@@ -436,8 +436,8 @@
          
           <p>
           Reacciona, reclamada por la necesidad de que esto cambie pronto, de 
-          inmediato, que cese el casi total tullimiento que de súbito padece. Acciona la 
-          cabeza para consultar, medio ladeada, las estampitas que tiene paradas en la 
+          inmediato, que cese el casi total tullimiento que de súbito padece. Acciona la <rs type="human" subtype="part">
+          cabeza</rs> para consultar, medio ladeada, las estampitas que tiene paradas en la 
           mesa de luz, y con <rs type="emotion" key="fervor">fervor</rs>, acezante, 
           <seg type="delivery" ana="#oracion">reza y ruega, reza y ruega, implora…</seg> 
           <said who="#lumila" aloud="true" direct="true">«un milagrito, Señor, que se me resucite el <persName ref="#gabriel">Gabriel</persName>»</said>
@@ -466,7 +466,7 @@
 
           <p>
           <said who="#lumila" aloud="true" direct="true">—Tiene que ser por <rs type="emotion" key="miedo">miedo</rs>… Miedo al dijunto, aunque sea mi hombre. El 
-          <rs type="emotion" key="miedo">miedo</rs> mata y me mató la pierna que me quedaba sana.</said>
+          <rs type="emotion" key="miedo">miedo</rs> mata y me mató la <rs type="human" subtype="part">pierna</rs> que me quedaba sana.</said>
           </p>
 
           <p>
@@ -477,7 +477,7 @@
 
           <p>
           <said who="#lumila" aloud="true" direct="true">—Tiene que ser por <rs type="emotion" key="miedo">miedo</rs>… Miedo al dijunto, aunque sea mi hombre. El 
-          <rs type="emotion" key="miedo">miedo</rs> mata y me mató la pierna que me quedaba sana.</said>
+          <rs type="emotion" key="miedo">miedo</rs> mata y me mató la <rs type="human" subtype="part">pierna</rs> que me quedaba sana.</said>
           </p>
 
           <p>
@@ -649,7 +649,7 @@
           <p>
           A la hora de las <rs type="animal">cabras</rs>, se le retuerce la pena por la <rs type="animal" subtype="collective">chivada</rs> que no tiene 
           escape al campo para su mascada, y ha de soportar resecos los lisos troncos de 
-          bebedero… A la par, codicia la leche de las ubres de cabra que podrían darle 
+          bebedero… A la par, codicia la .leche de las <rs type="animal" subtype="part">ubres</rs> de <rs type="animal">cabra</rs> que podrían darle 
           líquido y alimento.
           </p>
 
@@ -808,7 +808,7 @@
           <p>
           Ahora está enroscado en el hoyo que sus huesos han ido formando en el 
           piso de esa habitación y se inquieta por las voces alteradas que, 
-          entrecortadamente, tan cerca de sus orejas, emite la mujer.
+          entrecortadamente, tan cerca de sus <rs type="animal" subtype="part">orejas</rs>, emite la mujer.
           </p>
 
           <p>
@@ -892,8 +892,8 @@
           </p>
 
           <p>
-          Recobra debilitados los sentidos y descubre que su <rs type="animal">perro</rs> pasa y repasa su 
-          lengua cálida por la herida. Cambia en consecuencia sus impresiones, 
+          Recobra debilitados los sentidos y descubre que su <rs type="animal">perro</rs> pasa y repasa 
+          su <rs type="animal" subtype="part">lengua</rs> cálida por la herida. Cambia en consecuencia sus impresiones, 
           confiada, y sonríe. Está exhausta y ha quedado tendida de espaldas. Ya se 
           descansa y le <seg type="delivery" ana="#afectuoso">dice, con cariño y gratitud</seg>:
           <said who="#lumila" aloud="true" direct="true">—Sos mi <rs type="animal">perro</rs> y te llamás <name type="dog">Fiel</name>. Bien nombrao, siempre lo supe.</said>
