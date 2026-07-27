@@ -196,6 +196,16 @@
       font-size: 1.1rem;
     }
 
+    /* Regla estricta para asegurar que la tipografía de los párrafos no varíe */
+    .columna-texto p {
+      font-family: 'Georgia', serif;
+      font-size: 1.1rem;
+      color: #2c3e50;
+      text-align: justify;
+      margin-bottom: 1rem;
+      font-weight: normal;
+    }
+
     /* COLUMNA DERECHA: VISOR PDF */
     .columna-pdf {
       width: 50%;
@@ -228,6 +238,12 @@
     .nav-paginas-btns button:disabled {
       background: #7f8c8d;
       cursor: not-allowed;
+    }
+
+    .selector-paginas select {
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-weight: bold;
     }
 
     .columna-pdf iframe {
@@ -273,21 +289,15 @@
       margin-bottom: 15px;
     }
 
-    /* Estilo neutro para los asteriscos de separación */
-    milestone[unit="section"] {
-      display: block;
-      text-align: center;
-      font-family: 'Georgia', serif;
-      font-size: 1rem;
-      color: #555555;
-      margin: 20px 0;
-      font-weight: normal;
-      letter-spacing: 3px;
-    }
+  milestone[unit="section"] {
+  display: block;
+  text-align: center;
+  margin: 25px 0; /* Mantiene solo la separación vertical */
+  }
 
-    milestone[unit="section"]::before {
-      content: "* * *";
-    }
+  milestone[unit="section"]::before {
+  content: "* * *";
+  }
 
     /* HOJAS TEI (SINCRONIZACIÓN CON PDF) */
     .hoja-tei {
@@ -308,31 +318,6 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       line-height: 1.7;
     }
-
-    .zotero-box {
-      background: #fdfefe;
-      border: 1px solid #dcdde1;
-      border-left: 5px solid #e74c3c;
-      padding: 25px;
-      border-radius: 6px;
-      margin-top: 15px;
-    }
-
-    .zotero-btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #e74c3c;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 4px;
-      transition: background 0.2s;
-    }
-
-    .zotero-btn:hover {
-      background-color: #c0392b;
-    }
   </style>
 </head>
 <body>
@@ -343,6 +328,7 @@
       <li><a class="nav-link active" onclick="mostrarPestana('inicio', this)">Inicio / Autor</a></li>
       <li><a class="nav-link" onclick="mostrarPestana('edicion', this)">Edición Paralela ("Pez")</a></li>
       <li><a class="nav-link" onclick="mostrarPestana('glosario', this)">Glosario</a></li>
+      <li><a class="nav-link active" onclick="mostrarPestana('bitacora', this)">Bitácora</a></li>
       <li><a class="nav-link" onclick="mostrarPestana('bibliografia', this)">Bibliografía (Zotero)</a></li>
     </ul>
   </nav>
@@ -371,7 +357,7 @@
         <div class="meta-card">
           <h3>Datos de la Fuente Base y Publicación</h3>
           <ul>
-            <li><strong>Cuento editado:</strong> "Pez"</li>
+            <li><strong>Cuentos editados:</strong> "Pez"</li>
             <li><strong>Autor:</strong> Antonio Di Benedetto</li>
             <li><strong>Obra fuente base:</strong> <em>Cuentos completos</em> (Adriana Hidalgo Editora, 2006, 680 págs.)</li>
             <li><strong>Compiladores:</strong> Jimena Néspolo y Julio Premat (Introducción)</li>
@@ -411,10 +397,11 @@
     <div class="contenedor-paralelo">
       
       <main class="columna-texto">
-        <div class="espacio-blanco"></div>
-        <h1 class="titulo-rojo">Pez</h1>
 
         <div id="hoja-tei-1" class="hoja-tei active">
+          <div class="espacio-blanco"></div>
+          <h1 class="titulo-rojo">Pez</h1>
+
           <div type="section" n="1">
             <p>
               Los susurros de la noche reculan, para <persName ref="#lumila">Lumila</persName>, y desaparecen. Se le hacen un 
@@ -485,465 +472,466 @@
         </div>
 
         <div id="hoja-tei-2" class="hoja-tei">
-             <p>
-             <said who="#gabriel">—Asienta en la arena lisa, todo esto que fue el fondo del agua grande.</said>
-             </p>
+           <p>
+           <said who="#gabriel">—Asienta en la arena lisa, todo esto que fue el fondo del agua grande.</said>
+           </p>
 
-             <p>
-              El oído entrenado de la <persName ref="#lumila">Lumila</persName> no podría distinguir, tal vez, el asentarse 
-              de los <rs type="animal" subtype="part">cascos</rs> del <rs type="animal" subtype="collective">caballaje</rs> que está volviendo, acallado por el manto de arena, 
-              si no fuera porque las herraduras se dan constantemente con las <rs type="animal" subtype="remains">conchillas de 
-              moluscos</rs>, que rapizan de blanco, matizado de celeste, vastas extensiones de 
-              eso que, dicen, fue mar, y es donde el matrimonio anidó su pobreza.
+           <p>
+            El oído entrenado de la <persName ref="#lumila">Lumila</persName> no podría distinguir, tal vez, el asentarse 
+            de los <rs type="animal" subtype="part">cascos</rs> del <rs type="animal" subtype="collective">caballaje</rs> que está volviendo, acallado por el manto de arena, 
+            si no fuera porque las herraduras se dan constantemente con las <rs type="animal" subtype="remains">conchillas de 
+            moluscos</rs>, que rapizan de blanco, matizado de celeste, vastas extensiones de 
+            eso que, dicen, fue mar, y es donde el matrimonio anidó su pobreza.
+          </p>
+
+          <p>
+            El <rs type="animal">caballo</rs> se detiene. Merman para <persName ref="#lumila">Lumila</persName> las referencias, y pasa rato. 
+            ¿Ha venido solo…? ¿Se ha desgraciado <persName ref="#gabriel">Gabriel</persName>…? Espera, mordiendo el 
+            borde de la sábana. <persName ref="#lumila">Lumila</persName> no puede salir a ver con sus ojos, está anudada a la 
+            cama.
+          </p>
+
+          <p>
+            El <rs type="animal">animal</rs> suelta un relincho prudente, que a la <persName ref="#lumila">Lumila</persName> le confunde las 
+            impresiones: parece relincho de alertar a los de la <rs type="place" ref="#casa">casa</rs>, o de sentirse solo y 
+            llamar a la gente habitual; también, por fortuna, semeja un modo de 
+            despabilar al que lo monta y avisarle que han llegado a destino.
+          </p>
+
+          <p>
+            Después, un ruido seco de fardo que cae (o de cuerpo muerto que se 
+            derrumba). Para <persName ref="#lumila">Lumila</persName> subsiste la espera, aún, pero más desesperada. Porque 
+            ella imagina que le mataron al hombre, lo cruzaron sobre la montura y 
+            soltaron la <rs type="animal">bestia</rs> seguros de que enfilaría al corral. 
+          </p>
+
+          <p>
+            Todavía se intriga, porque no puede acudir a indagar con su propia 
+            mirada.
+          </p>
+
+          <p>
+            Más rato y, tras algunos sonidos precursores, el amo del <rs type="place" ref="#casa">hogar</rs>, medio 
+            piltrafa el porte, se encuadra en el vano de la puerta, cara turbia frente al 
+            resplandor sereno de la candela.
+          </p>
+
+          <p>
+            Para <persName ref="#lumila">Lumila</persName> vienen juntos un lloro rabón y consolado y una sensación que 
+            de una sola olida —⁠ha irrumpido un vaho de alcohol en la atmósfera⁠— le 
+            hace proferir el reniego de: <said who="#Lumila">«¡Jiede…!»</said>.
+          </p>
+
+          <p>
+            El hombre gatea hasta el lecho, lo escala como puede, prendiéndose de las curvas de hierro 
+            del respaldo, al tumbarse medio aplasta a la mujer pasiva, y 
+            sin preparativos lo fusila el sueño.
+          </p>
+
+          <milestone unit="section" rend="asterisks"/>
+
+          <div type="section" n="2">
+            <p>
+              <persName ref="#lumila">Lumila</persName> despierta con sed que apacigua un resto de agua que mantenía el 
+              tazón. Le apetece más; sin embargo, no la pedirá del durmiente, que con tanta 
+              serenidad, sin hacerse sentir, reposa a su lado.
             </p>
 
             <p>
-              El <rs type="animal">caballo</rs> se detiene. Merman para <persName ref="#lumila">Lumila</persName> las referencias, y pasa rato. 
-              ¿Ha venido solo…? ¿Se ha desgraciado <persName ref="#gabriel">Gabriel</persName>…? Espera, mordiendo el 
-              borde de la sábana. <persName ref="#lumila">Lumila</persName> no puede salir a ver con sus ojos, está anudada a la 
-              cama.
+              Oscuras <rs type="animal" subtype="insect">mariposa</rs> de terciopelo revolotean sobre <persName ref="#lumila">Lumila</persName> y, al fin, le 
+              cubren los ojos, entregándola a una nada tranquila.
             </p>
 
             <p>
-              El <rs type="animal">animal</rs> suelta un relincho prudente, que a la <persName ref="#lumila">Lumila</persName> le confunde las 
-              impresiones: parece relincho de alertar a los de la <rs type="place" ref="#casa">casa</rs>, o de sentirse solo y 
-              llamar a la gente habitual; también, por fortuna, semeja un modo de 
-              despabilar al que lo monta y avisarle que han llegado a destino.
+              De cuyo dominio otra vez la extrae la sed. Pero ya es el alba y el ansia se 
+              le hace de mate que viene mezclada con hambre, porque el <persName ref="#gabriel">Gabriel</persName> faltó ayer 
             </p>
-
-            <p>
-              Después, un ruido seco de fardo que cae (o de cuerpo muerto que se 
-              derrumba). Para <persName ref="#lumila">Lumila</persName> subsiste la espera, aún, pero más desesperada. Porque 
-              ella imagina que le mataron al hombre, lo cruzaron sobre la montura y 
-              soltaron la <rs type="animal">bestia</rs> seguros de que enfilaría al corral. 
-            </p>
-
-            <p>
-              Todavía se intriga, porque no puede acudir a indagar con su propia 
-              mirada.
-            </p>
-
-            <p>
-              Más rato y, tras algunos sonidos precursores, el amo del <rs type="place" ref="#casa">hogar</rs>, medio 
-              piltrafa el porte, se encuadra en el vano de la puerta, cara turbia frente al 
-              resplandor sereno de la candela.
-            </p>
-
-            <p>
-              Para <persName ref="#lumila">Lumila</persName> vienen juntos un lloro rabón y consolado y una sensación que 
-              de una sola olida —⁠ha irrumpido un vaho de alcohol en la atmósfera⁠— le 
-              hace proferir el reniego de: <said who="#Lumila">«¡Jiede…!»</said>.
-            </p>
-
-            <p>
-              El hombre gatea hasta el lecho, lo escala como puede, prendiéndose de las curvas de hierro 
-              del respaldo, al tumbarse medio aplasta a la mujer pasiva, y 
-              sin preparativos lo fusila el sueño.
-            </p>
-
-            <milestone unit="section" rend="asterisks"/>
-
-            <div type="section" n="2">
-              <p>
-                <persName ref="#lumila">Lumila</persName> despierta con sed que apacigua un resto de agua que mantenía el 
-                tazón. Le apetece más; sin embargo, no la pedirá del durmiente, que con tanta 
-                serenidad, sin hacerse sentir, reposa a su lado.
-              </p>
-
-              <p>
-                Oscuras <rs type="animal" subtype="insect">mariposa</rs> de terciopelo revolotean sobre <persName ref="#lumila">Lumila</persName> y, al fin, le 
-                cubren los ojos, entregándola a una nada tranquila.
-              </p>
-
-              <p>
-                De cuyo dominio otra vez la extrae la sed. Pero ya es el alba y el ansia se 
-                le hace de mate que viene mezclada con hambre, porque el <persName ref="#gabriel">Gabriel</persName> faltó ayer 
-              </p>
-            </div> 
+          </div>       
         </div>
 
         <div id="hoja-tei-3" class="hoja-tei">
+          <p>
+            a la hora de la cena y ella, claro, impedida como es, sola, no puede.
+          </p>
+
+          <p>
+            Por esa reflexión —de que él faltó⁠— comienza a enterarse que algo 
+            diferente les está ocurriendo. Extraña que amanezca sin que él la atienda con 
+            un mate aromoso y cálido, porque, si a las veces se pierde, de todas maneras 
+            hay que reconocer que cumplidor y hacendoso es, y compasivo, con ella, que 
+            por sí misma apenas se puede valer.
+          </p>
+
+          <p>
+            Ya se recuerda del todo y lo examina con una mirada prolija y un ánimo 
+            receloso y precavido. Permanece vestido, encogido y destapado. Y ahora que 
+            lo observa mejor descubre que la mano izquierda se queda casi en el aire, 
+            medio apoyada en el pecho, curvos los dedos, como si ahí, en el lugar del 
+            corazón, se le hubiera encendido una brasa y él llevara el ademán de 
+            arrancarla.
+          </p>
+
+          <p>
+            Después, <persName ref="#lumila">Lumila</persName> entiende.
+          </p>
+
+          <milestone unit="section" rend="asterisks"/>
+        
+          <div type="section" n="3">
             <p>
-              a la hora de la cena y ella, claro, impedida como es, sola, no puede.
+              Se ha bebido su llanto, suelto sin control durante horas, y las lágrimas le han 
+              atenuado la sequedad de la boca.
             </p>
 
             <p>
-              Por esa reflexión —de que él faltó⁠— comienza a enterarse que algo 
-              diferente les está ocurriendo. Extraña que amanezca sin que él la atienda con 
-              un mate aromoso y cálido, porque, si a las veces se pierde, de todas maneras 
-              hay que reconocer que cumplidor y hacendoso es, y compasivo, con ella, que 
-              por sí misma apenas se puede valer.
+              Ha renacido, con el día, cuanto tiene vida en redor del puesto.
+            </p>
+            
+            <p>
+              Los balidos, sin perder su natural humildad, solicitan con insistencia la 
+              libertad que niega el corral de retorcido palo a pique, impedimento del trote 
+              hacia el pasto ralo y los tallos tiernos que conceden la subsistencia a la magra 
+              majada.
             </p>
 
             <p>
-              Ya se recuerda del todo y lo examina con una mirada prolija y un ánimo 
-              receloso y precavido. Permanece vestido, encogido y destapado. Y ahora que 
-              lo observa mejor descubre que la mano izquierda se queda casi en el aire, 
-              medio apoyada en el pecho, curvos los dedos, como si ahí, en el lugar del 
-              corazón, se le hubiera encendido una brasa y él llevara el ademán de 
-              arrancarla.
+              Las <rs type="animal">gallinas</rs> y el <rs type="animal">pavo</rs> están en su rutina, afanado el pico en abatir <rs type="animal" subtype="insect">insectos</rs> 
+              y deshebrar raíces.
             </p>
 
             <p>
-              Después, <persName ref="#lumila">Lumila</persName> entiende.
+              Gandulean los <rs type="animal">perros</rs>, sin <rs type="animal" subtype="collective">rebaño</rs> que acompañar a campo abierto.
             </p>
 
-            <milestone unit="section" rend="asterisks"/>
-          
-            <div type="section" n="3">
-              <p>
-                Se ha bebido su llanto, suelto sin control durante horas, y las lágrimas le han 
-                atenuado la sequedad de la boca.
-              </p>
+            <p>
+              El <rs type="animal">caballo</rs>, sin las restricciones del corral o del palenque, ha osado tomar 
+              su ración de pasto del cobertizo, y sólo le pesan el yugo de la montura por 
+              ahora inútil y el estorbo de las riendas que se arrastran y le enredan el paso 
+              si las pisa.
+            </p>
 
-              <p>
-                Ha renacido, con el día, cuanto tiene vida en redor del puesto.
-              </p>
-              
-              <p>
-                Los balidos, sin perder su natural humildad, solicitan con insistencia la 
-                libertad que niega el corral de retorcido palo a pique, impedimento del trote 
-                hacia el pasto ralo y los tallos tiernos que conceden la subsistencia a la magra 
-                majada.
-              </p>
+            <p>
+              Prospera la mañana y viene ese momento de aplacamiento general, tal 
+              como si cuanto existe de animado acatara la magia de ese astro de ojo 
+              ardiente que se coloca por arriba de todo y por un rato permanece quieto y 
+              vigilante.
+            </p>
 
-              <p>
-                Las <rs type="animal">gallinas</rs> y el <rs type="animal">pavo</rs> están en su rutina, afanado el pico en abatir <rs type="animal" subtype="insect">insectos</rs> 
-                y deshebrar raíces.
-              </p>
+            <p>
+              Los <rs type="animal">chivitos</rs> han acallado sus quejas.
+            </p>
 
-              <p>
-                Gandulean los <rs type="animal">perros</rs>, sin <rs type="animal" subtype="collective">rebaño</rs> que acompañar a campo abierto.
-              </p>
+            <p>
+              El silencio se propaga y anega el <rs type="place" ref="#rancho">rancho</rs>.
+            </p>
 
-              <p>
-                El <rs type="animal">caballo</rs>, sin las restrictions del corral o del palenque, ha osado tomar 
-                su ración de pasto del cobertizo, y sólo le pesan el yugo de la montura por 
-                ahora inútil y el estorbo de las riendas que se arrastran y le enredan el paso 
-                si las pisa.
-              </p>
-
-              <p>
-                Prospera la mañana y viene ese momento de aplacamiento general, tal 
-                como si cuanto existe de animado acatara la magia de ese astro de ojo 
-                ardiente que se coloca por arriba de todo y por un rato permanece quieto y 
-                vigilante.
-              </p>
-
-              <p>
-                Los <rs type="animal">chivitos</rs> han acallado sus quejas.
-              </p>
-
-              <p>
-                El silencio se propaga y anega el <rs type="place" ref="#rancho">rancho</rs>.
-              </p>
-
-              <p>
-                Cesan los quejidos y los hipos de <persName ref="#lumila">Lumila</persName>. Se rinde.
-              </p>
-              <p>
-                Y allí están los dos, sobre el lecho, uno muerto del todo, la otra con la 
-                mitad de sus miembros poseídos por la muerte.
-              </p>
-            </div>
+            <p>
+              Cesan los quejidos y los hipos de <persName ref="#lumila">Lumila</persName>. Se rinde.
+            </p>
+            <p>
+              Y allí están los dos, sobre el lecho, uno muerto del todo, la otra con la 
+              mitad de sus miembros poseídos por la muerte.
+            </p>
+          </div>
         </div>
         
         <div id="hoja-tei-4" class="hoja-tei">
           <div type="section" n="4">
-           <milestone unit="section" rend="asterisks"/>
+            <milestone unit="section" rend="asterisks"/>
             <p>
-            <persName ref="#lumila">Lumila</persName> ha descuidado sus necesidades más íntimas, que ahora se le 
-            manifiestan, exigentes y perentorias por haber sido postergadas.
+              <persName ref="#lumila">Lumila</persName> ha descuidado sus necesidades más íntimas, que ahora se le 
+              manifiestan, exigentes y perentorias por haber sido postergadas.
             </p>
 
             <p>
-            Sabe que afrontará un esfuerzo superior al normal, porque hasta para eso 
-            se venía sosteniendo en su hombre, y tendrá que hacerlo sola.
+              Sabe que afrontará un esfuerzo superior al normal, porque hasta para eso 
+              se venía sosteniendo en su hombre, y tendrá que hacerlo sola.
             </p>
 
             <p>
-            Se propone descender de la cama. Toma apoyo en el brazo izquierdo y 
-            procura favorecer el impulso con la pierna del mismo costado. Pero no le 
-            obedece.
+              Se propone descender de la cama. Toma apoyó en el brazo izquierdo y 
+              procura favorecer el impulso con la pierna del mismo costado. Pero no le 
+              obedece.
             </p>
 
             <p>
-            Rehace la tentativa y falla.
+              Rehace la tentativa y falla.
             </p>
 
             <p>
-            Se le desmanda la pierna izquierda, igual que en otro tiempo y hasta el 
-            presente, quizás para siempre, se le desgobernaron pierna y brazo del flanco 
-            derecho.
+              Se le desmanda la pierna izquierda, igual que en otro tiempo y hasta el 
+              presente, quizás para siempre, se le desgobernaron pierna y brazo del flanco 
+              derecho.
             </p>
 
             <p>
-            Masculla una maldición y se asusta, más que de su estado, de haber 
-            proferido palabras profanas.
+              Masculla una maldición y se asusta, más que de su estado, de haber 
+              proferido palabras profanas.
             </p>
 
             <p>
-            <said who="#lumila" aloud="false" direct="false">Se pregunta si está muriendo por partes</said> 
-            y se mira la <rs type="human" subtype="part">mano</rs> 
-            que todavía le sirve, con prevención de que también se invalide.
+              <said who="#lumila" aloud="false" direct="false">Se pregunta si está muriendo por partes</said> 
+              y se mira la <rs type="human" subtype="part">mano</rs> 
+              que todavía le sirve, con prevención de que también se invalide.
             </p>
 
             <p>
-            Entre tanto pesar y temor tamaño, se moja, y se avergüenza como si fuera 
-            la primera vez. Se excusa, se reprocha; gimoteando parece que quiere explicar 
-            que ella quiso y procuró ir a hacerlo donde se debe:
-            <said who="#lumila" aloud="true">—Por ser limpia, me pasa.</said>
+              Entre tanto pesar y temor tamaño, se moja, y se avergüenza como si fuera 
+              la primera vez. Se excusa, se reprocha; gimoteando parece que quiere explicar 
+              que ella quiso y procuró ir a hacerlo donde se debe:
+              <said who="#lumila" aloud="true">—Por ser limpia, me pasa.</said>
+            </p>
+           
+            <p>
+              Reacciona, reclamada por la necesidad de que esto cambie pronto, de 
+              inmediato, que cese el casi total tullimiento que de súbito padece. Acciona la 
+              cabeza para consultar, medio ladeada, las estampitas que tiene paradas en la 
+              mesa de luz, y con fervor, acezante, reza y ruega, reza y ruega, implora… <said who="#lumila" aloud="true">«un 
+              milagrito, Señor, que se me resucite el <persName ref="#gabriel">Gabriel</persName>»</said>
             </p>
 
             <p>
-            Reacciona, reclamada por la necesidad de que esto cambie pronto, de 
-            inmediato, que cese el casi total tullimiento que de súbito padece. Acciona la 
-            cabeza para consultar, medio ladeada, las estampitas que tiene paradas en la 
-            mesa de luz, y con fervor, acezante, reza y ruega, reza y ruega, implora… <said who="#lumila" aloud="true">«un 
-            milagrito, Señor, que se me resucite el <persName ref="#gabriel">Gabriel</persName>»</said>
+              Se aplica a mirar intensamente al marido yacente y pálido, con algún 
+              sobresalto por si lo que pidió sucede de repente. En la espera <persName ref="#lumila">Lumila</persName> 
+              <said who="#lumila" aloud="false" direct="false">se está 
+              preguntando por dónde podrá recuperar la vida: por la carne o por el 
+              entendimiento… Si primero que nada abrirá los ojos (que en el trance se le 
+              quedaron cerrados, tal vez porque finó cuando se hallaba durmiendo). O si se 
+              hará presénte, más bien, de palabra, y qué misterios podrá decir. Y si para 
+              volver se sufre…</said>
             </p>
 
             <p>
-            Se aplica a mirar intensamente al marido yacente y pálido, con algún 
-            sobresalto por si lo que pidió sucede de repente. En la espera <persName ref="#lumila">Lumila</persName> 
-            <said who="#lumila" aloud="false" direct="false">se está 
-            preguntando por dónde podrá recuperar la vida: por la carne o por el 
-            entendimiento… Si primero que nada abrirá los ojos. O si se 
-            hará presente, más bien, de palabra, y qué misterios podrá decir. Y si para 
-            volver se sufre…</said>
+              Atardece.
             </p>
 
             <p>
-            Atardece.
+              La acosan y la desgarran las necesidades. El calor no mengua. Transpira 
+              por el ambiente caldeado y por los empeños denodados de desclavarse del 
+              lecho.
             </p>
 
             <p>
-            La acosan y la desgarran las necesidades. El calor no mengua. Transpira 
-            por el ambiente caldeado y por los empeños denodados de desclavarse del 
-            lecho.
-            </p>
-
-            <p>
-            —Tiene que ser por miedo… Miedo al dijunto, aunque sea mi hombre. El 
-            miedo mata y me mató la pierna que me quedaba sana.
+              —Tiene que ser por miedo… Miedo al dijunto, aunque sea mi hombre. El 
+              miedo mata y me mató la pierna que me quedaba sana.
             </p>
           </div>
         </div>
 
         <div id="hoja-tei-5" class="hoja-tei">
-            <p>
-             Necesita ver algo viviente en su cercanía, junto a ella. Llama a los <rs type="animal">canes</rs>:
-            —<name type="dog">Fiel</name>, <name type="dog">Lión</name>, <name type="dog">Capú</name>.
-            </p>
+          <p>
+           Necesita ver algo viviente en su cercanía, junto a ella. Llama a los <rs type="animal">canes</rs>:
+          —<name type="dog">Fiel</name>, <name type="dog">Lión</name>, <name type="dog">Capú</name>.
+          </p>
 
-            <p>
-            No hace falta que siga: «<name type="dog">Blanquita</name>, <name type="dog">Mancha</name>, <name type="dog">Canela</name>».
-            </p>
+          <p>
+          No hace falta que siga: «<name type="dog">Blanquita</name>, <name type="dog">Mancha</name>, <name type="dog">Canela</name>».
+          </p>
 
-            <p>
-            Ya están ahí los seis, sacudiéndose el polvo de la larga siesta en el patio o 
-            bajo el alero. «De seguro con hambre» se dice <persName ref="#lumila">Lumila</persName> y medita: «Mismo que 
-            mí».
-            </p>
+          <p>
+          Ya están ahí los seis, sacudiéndose el polvo de la larga siesta en el patio o 
+          bajo el alero. «De seguro con hambre» se dice <persName ref="#lumila">Lumila</persName> y medita: «Mismo que 
+          mí».
+          </p>
 
-            <p>
-            Sin embargo, contra la costumbre confianzuda de los seis, no pasan de la 
-            puerta, ni la <name type="dog">Blanquita</name>, tan mimosa que sin permiso se suele acomodar en la 
-            almohada.
-            </p>
+          <p>
+          Sin embargo, contra la costumbre confianzuda de los seis, no pasan de la 
+          Puerta, ni la <name type="dog">Blanquita</name>, tan mimosa que sin permiso se suele acomodar en la 
+          almohada.
+          </p>
 
-            <p>
-            La actitud reticente de los monteros empuja a <persName ref="#lumila">Lumila</persName> hacia otra 
-            cavilación: ya no es <persName ref="#gabriel">Gabriel</persName>, es un muerto el que está en el <rs type="place" ref="#rancho">rancho</rs>, y si esta 
-            presencia hasta a los <rs type="animal">perros</rs> vuelve cobardes, ¿qué noche le aguarda a ella…? 
-            ¿Cómo soportará las tinieblas con un finado en su cama…?
-            </p>
+          <p>
+          La actitud reticente de los monteros empuja a <persName ref="#lumila">Lumila</persName> hacia otra 
+          cavilación: ya no es <persName ref="#gabriel">Gabriel</persName>, es un muerto el que está en el <rs type="place" ref="#rancho">rancho</rs>, y si esta 
+          presencia hasta a los <rs type="animal" >perros</rs> vuelve cobardes, ¿qué noche le aguarda a ella…? 
+          ¿Cómo soportará las tinieblas con un finado en su cama…?
+          </p>
 
-            <p>
-            La domina el ansia de encender la vela, a costa de cualquier esfuerzo. Le 
-            habla a su mano activa como si fuera una amiga, pidiéndole que no ceda, que 
-            la socorra, que no la abandone en la negrura… La excitación le hace malograr 
-            fósforos y trabajos, al cabo la llama brota. <persName ref="#lumila">Lumila</persName> dice gracias y, al 
-            reencontrar por la luz las imágenes, se decide a encomendar otro milagro. Ya 
-            ha estado cavilando que pidió demasiado y teme haber causado ofensa y 
-            merecer castigo. «Era mi hombre —⁠se justifica⁠—, conmigo era bueno, 
-            aunque para los demás no fuera nadie. Pobrecito <persName ref="#gabriel">Gabriel</persName>, no hizo mérito».
-            </p>
+          <p>
+          La domina el ansia de encender la vela, a costa de cualquier esfuerzo. Le 
+          habla a su mano activa como si fuera una amiga, pidiéndole que no ceda, que 
+          la socorra, que no la abandone en la negrura… La excitación le hace malograr 
+          fósforos y trabajos, al cabo la llama brota. <persName ref="#lumila">Lumila</persName> dice gradas y, al 
+          reencontrar por la luz las imágenes, se decide a encomendar otro milagro. Ya 
+          ha estado cavilando que pidió demasiado y teme haber causado ofensa y 
+          merecer castigo. «Era mi hombre —⁠se justifica⁠—, conmigo era bueno, 
+          aunque para los demás no fuera nadie. Pobrecito <persName ref="#gabriel">Gabriel</persName>, no hizo mérito».
+          </p>
 
-            <p>
-            La ronda la tentación de suplicar que vuelva el hijo, que se fue a la ciudad, 
-            a las fábricas. Ella podría decir, en su ruego: «Mi hijo, Señor, mío y del 
-            <persName ref="#gabriel">Gabriel</persName>, legítimo de los dos, con fe de bautismo y todo…». Se apoca, sin 
-            atreverse a reincidir: «Sería muy mucho pedir, un milagro demasiado 
-            grande…». Y se cobija en las deliberaciones: «Pudiera ser que vuelva solo… 
-            Que perciba el llamado». Se pregunta cómo será ahora, después de diez años. 
-            Si se acordará de ella, si podrá saber que el padre no vive. Y deduce que si el 
-            padre ha muerto ya es ánima y un ánima le puede hablar a los vivos, aunque 
-            sea cuando éstos duermen, y quizás el ánima de <persName ref="#gabriel">Gabriel</persName> puede avisarle al hijo 
-            que ella está sola y lo necesita desesperadamente… ¿Puede…?
-            </p>
+          <p>
+          La ronda la tentación de suplicar que vuelva el hijo, que se fue a la ciudad, 
+          a las fábricas. Ella podría decir, en su ruego: «Mi hijo, Señor, mío y del 
+          <persName ref="#gabriel">Gabriel</persName>, legítimo de los dos, con fe de bautismo y todo…». Se apoca, sin 
+          atreverse a reincidir: «Sería muy mucho pedir, un milagro demasiado 
+          grande…». Y se cobija en las deliberaciones: «Pudiera ser que vuelva solo… 
+          Que perciba el llamado». Se pregunta cómo será ahora, después de diez años. 
+          Si se acordará de ella, si podrá saber que el padre no vive. Y deduce que si el 
+          padre ha muerto ya es ánima y un ánima le puede hablar a los vivos, aunque 
+          sea cuando éstos duermen, y quizás el ánima de <persName ref="#gabriel">Gabriel</persName> puede avisarle al hijo 
+          que ella está sola y lo necesita desesperadamente… ¿Puede…?
+          </p>
 
-            <milestone unit="section" rend="asterisks"/>
+          <milestone unit="section" rend="asterisks"/>
           
-            <div type="section" n="5">
-              <p>
-              Contra lo que calculaba, la noche no le agranda los terrores.
-              </p>
+          <div type="section" n="5">
+            <p>
+            Contra lo que calculaba, la noche no le agranda los terrores.
+            </p>
 
-              <p>
-              De cierta manera las sombras la amparan, le han concedido la 
-              misericordia de no ver tan patente lo que tiene al lado. Lo presiente, no hay 
-              remedio; pero no lo siente, o más bien ya lo siente, o quiere sentirlo, ajeno, y 
-              evita rozarlo.
-              </p>
-            </div>
+            <p>
+            De cierta manera las sombras la amparan, le han concedido la 
+            misericordia de no ver tan patente lo que tiene al lado. Lo presiente, no hay 
+            remedio; pero no lo siente, o más bien ya lo siente, o quiere sentirlo, ajeno, y 
+            evita rozarlo.
+            </p>
+          </div>
         </div>
 
         <div id="hoja-tei-6" class="hoja-tei">
-            <p>
-            Sin embargo, como una culpa recuerda que no le ha dado un beso de adiós 
-            en la frente. Se dispensa, hablando a alguien que no es él:
-            <said who="#Lumila">—Habrá tiempo. Todavía está aquí, no se ha ido.</said>
-            </p>
+          <p>
+          Sin embargo, como una culpa recuerda que no le ha dado un beso de adiós 
+          en la frente. Se dispensa, hablando a alguien que no es él:
+          <said who="#Lumila">—Habrá tiempo. Todavía está aquí, no se ha ido.</said>
+          </p>
 
-            <p>
-            Se defiende, hablándole a él:
-            <said who="#Lumila">—No puedo moverme para alcanzar tu frente. Ya ves, ni agua tengo y me 
-            muero de sed…</said> 
-            </p>
+          <p>
+          Se defiende, hablándole a él:
+          <said who="#Lumila">—No puedo moverme para alcanzar tu frente. Ya ves, ni agua tengo y me 
+          muero de sed…</said> 
+          </p>
 
-            <p>
-            Entonces se transporta a preocupaciones más inmediatas. Necesita beber, 
-            necesita comer. Precisa un auxilio sobrenatural, pero debe resignarse a 
-            milagros más chicos que los que anduvo implorando, y los propone en 
-            manojo, a montones: que asome don Casimir o se apiade el achurero. Que le 
-            haga un cumplido la Inés, que se le ocurra pasar. Que venga la recorrida. Que 
-            venga el dentista loco. Que venga… Que venga…
-            </p>
+          <p>
+          Entonces se transporta a preocupaciones más inmediatas. Necesita beber, 
+          necesita comer. Precisa un auxilio sobrenatural, pero debe resignarse a 
+          milagros más chicos que los que anduvo implorando, y los propone en 
+          manojo, a montones: que asome don Casimir o se apiade el achurero. Que le 
+          haga un cumplido la Inés, que se le ocurra pasar. Que venga la recorrida. Que 
+          venga el dentista loco. Que venga… Que venga…
+          </p>
 
-            <p>
-            Sin embargo, por ahí, corrientemente, no viene nadie. No se le esconden 
-            las imposibilidades: don Casimir, el puntillero, tendero ambulante, árabe y 
-            enamoradizo, sólo se interna por esas huellas a los meses, no muy seguido. 
-            (En <persName ref="#lumila">Lumila</persName> retoña como dibujada la memoria de aquella fina puntilla que 
-            nunca pudo comprar). El vendedor de achuras no les perdona la deuda, y una 
-            vez por semana —⁠así saben que es martes⁠— le escuchan sonar la corneta, 
-            pero bien lejos. (Cuelga vacía del entramado de caña del corredor la fiambrera 
-            de alambre tejido). La Inés toma ese rumbo únicamente de paso hacia el 
-            caserío, cuando se anoticia de que los remolques de Sanidad traerán al 
-            médico, a las cansadas. En cuanto a la recorrida de la partida policial, sólo se 
-            arrima a los <rs type="place" ref="#rancho">ranchos</rs> donde le halagan el paladar al comisario y más de cierto 
-            si lo despiden con lechón de regalo. Y el dentista, con su Ford de capota y el 
-            torno de pedal montado atrás… Se empecina en repechar por los rudimentos 
-            de camino y ni cuenta se da de los puestos que deja hacia adentro del campo, 
-            a menos que alguien se adelante a hacerle señas o lo persiga a caballo hasta 
-            donde se le atasque el coche, en algún jarillal. Lo evoca, <persName ref="#lumila">Lumila</persName>, con su largo 
-            guardapolvo blanco, las manos pulcras y la mirada fanática, y se va diciendo: 
-            <said who="#lumila" aloud="true">«Y tan Bueno que es, pero tan loco…»</said>, 
-            hasta que vuelve sobre sí misma y se dice: 
-            <said who="#lumila" aloud="false">«Tan sola, mi alma…»</said>, 
-            y se conmisera de su desvalimiento que nada alivia.
-            </p>
+          <p>
+          Sin embargo, por ahí, corrientemente, no viene nadie. No se le esconden 
+          las imposibilidades: don Casimir, el puntillero, tendero ambulante, árabe y 
+          enamoradizo, sólo se interna por esas huellas a los meses, no muy seguido. 
+          (En <persName ref="#lumila">Lumila</persName> retoña como dibujada la memoria de aquella fina puntilla que 
+          nunca pudo comprar). El vendedor de achuras no les perdona la deuda, y una 
+          vez por semana —⁠así saben que es martes⁠— le escuchan sonar la corneta, 
+          pero bien lejos. (Cuelga vacía del entramado de caña del corredor la fiambrera 
+          de alambre tejido). La Inés toma ese rumbo únicamente de paso hacia el 
+          caserío, cuando se anoticia de que los remolques de Sanidad traerán al 
+          médico, a las cansadas. En cuanto a la recorrida de la partida policial, sólo se 
+          arrima a los <rs type="place" ref="#rancho">ranchos</rs> donde le halagan el paladar al comisario y más de cierto 
+          si lo despiden con lechón de regalo. Y el dentista, con su Ford de capota y el 
+          torno de pedal montado atrás… Se empecina en repechar por los rudimentos 
+          de camino y ni cuenta se da de los puestos que deja hacia adentro del campo, 
+          a menos que alguien se adelante a hacerle señas o lo persiga a caballo hasta 
+          donde se le atasque el coche, en algún jarillal. Lo evoca, <persName ref="#lumila">Lumila</persName>, con su largo 
+          guardapolvo blanco, las manos pulcras y la mirada fanática, y se va diciendo: 
+          <said who="#lumila" aloud="true">«Y tan Bueno que es, pero tan loco…»</said>, 
+          hasta que vuelve sobre sí misma y se dice: 
+          <said who="#lumila" aloud="false">«Tan sola, mi alma…»</said>, 
+          y se conmisera de su desvalimiento que nada alivia.
+          </p>
 
-            <p>
-            La gana el sueño y sueña que es moza y camina descalza por el arenal 
-            pisando y buscando conchitas de mar y el agua le lame los pies y los cubre de 
-            espuma y la corteja el <persName ref="#gabriel">Gabriel</persName> y se le niega ella porque tiene sed y sus labios 
-            no están para besos, codician el agua, y con <persName ref="#gabriel">Gabriel</persName> no quiere porque él… se 
-            ha muerto.
-            </p>
+          <p>
+          La gana el sueño y sueña que es moza y camina descalza por el arenal 
+          pisando y buscando Conchitas de mar y el agua le lame los pies y los cubre de 
+          espuma y la corteja el <persName ref="#gabriel">Gabriel</persName> y se le niega ella porque tiene sed y sus labios 
+          no están para besos, codician el agua, y con <persName ref="#gabriel">Gabriel</persName> no quiere porque él… se 
+          ha muerto.
+          </p>
 
-            <p>
-            Despierta. Es cierto: está muerto, bien muerto casi junto a ella.
-            </p>
+          <p>
+          Despierta. Es cierto: está muerto, bien muerto casi junto a ella.
+          </p>
         </div>
 
         <div id="hoja-tei-7" class="hoja-tei">
+          <p>
+            Grita. Necesita gritar.
+          </p>
+
+          <p>
+          Desde el patio, los <rs type="animal">perros</rs> la escuchan, a su manera la siguen, la copian, 
+          con lastimero aullido.
+          </p>
+
+          <p>
+          Pero uno, no. Se escurre, humildito, en la habitación, y va a echarse al pie 
+          de <persName ref="#lumila">Lumila</persName>. Es el <name type="dog">Fiel</name>.
+          </p>
+
+          <p>
+          A <persName ref="#lumila">Lumila</persName> la vence la ternura y llora lágrimas dulces.
+          </p>
+
+          <p>
+          Mas luego, consumida, se interna de nuevo en el sueño, y se sueña en la 
+          laguna o el mar que fue, y hay tormenta que abate las canoas de totora de los 
+          pescadores que usan las redes y el <rs type="animal" subtype="hybrid">el <rs type="animal">ave</rs> de enormes <rs type="animal" subtype="part">alas</rs> y <rs type="animal" subtype="part">cuerpo</rs> de <rs type="animal">pez</rs></rs>
+          irrumpe en su <rs type="place" ref="#rancho">cuarto del rancho</rs>, con un graznido y un fragor.
+          </p>
+
+          <p>
+          Despierta. Nada alea. No hay <rs type="animal">aves</rs> raras que violenten ese ámbito triste y 
+          recogido donde el temor de <persName ref="#lumila">Lumila</persName> va cediendo, tal vez porque cosa alguna 
+          ocurre, excepto en sus pesadillas, o porque la guarda el <name type="dog">Fiel</name>, tan sumiso.
+          </p>
+
+          <p>
+          <said who="#lumila" aloud="false">
+          «Así debiste llamarte 
+          <said>—piensa que tendría que decirle⁠—</said>: 
+          <persName ref="#sumiso">Sumiso</persName>
+          </said>, 
+          y pronuncia el nuevo <rs type="abstract">nombre</rs> con un tono acariciante.
+          </p>
+          
+          <p>
+          Previene el día que vendrá. Como se está durmiendo, se le enciman 
+          ensoñaciones y deseos, y en ellas su puesto desborda de gente que la atiende 
+          en su luto y sin duda se ocupará de darle sepultura al finadito. Pero ninguno le 
+          calma la sed.
+          </p>
+
+          <milestone unit="section" rend="asterisks"/>
+    
+          <div type="section" n="6">
             <p>
-              Grita. Necesita gritar.
+            A la hora de las <rs type="animal">cabras</rs>, se le retuerce la pena por la <rs type="animal" subtype="collective">chivada</rs> que no tiene 
+            escape al campo para su mascada, y ha de soportar resecos los lisos troncos de 
+            bebedero… A la par, codicia la leche de las ubres de cabra que podrían darle 
+            líquido y alimento.
             </p>
 
             <p>
-            Desde el patio, los <rs type="animal">perros</rs> la escuchan, a su manera la siguen, la copian, 
-            con lastimero aullido.
+            Tolera el amanecer y los balidos que apenan. Sobrelleva o pretende 
+            ignorar la compañía forzosa que tiene en el lecho, porque —⁠se conforta⁠— es 
+            mejor no presenciar lo que está pasando en la piel de su hombre.
             </p>
 
             <p>
-            Pero uno, no. Se escurre, humildito, en la habitación, y va a echarse al pie 
-            de <persName ref="#lumila">Lumila</persName>. Es el <name type="dog">Fiel</name>.
+            Pone los sentidos y la imaginación en la espera. Unos segundos escucha la 
+            campanilla de don Casimir el puntillero; otros la deslumbra un destello de sol 
+            en la hojalata que forma el techo curvo de la carretela del achurero, cuando 
+            está haciendo el codo de la huella hacia el <rs type="place" ref="#rancho">rancho</rs>…
             </p>
 
             <p>
-            A <persName ref="#lumila">Lumila</persName> la vence la ternura y llora lágrimas dulces.
+            Nada de eso sucede. Nadie viene.
             </p>
 
             <p>
-            Mas luego, consumida, se interna de nuevo en el sueño, y se sueña en la 
-            laguna o el mar que fue, y hay tormenta que abate las canoas de totora de los 
-            pescadores que usan las redes y el <rs type="animal" subtype="hybrid">el <rs type="animal">ave</rs> de enormes <rs type="animal" subtype="part">alas</rs> y <rs type="animal" subtype="part">cuerpo</rs> de <rs type="animal">pez</rs></rs>
-            irrumpe en su <rs type="place" ref="#rancho">cuarto del rancho</rs>, con un graznido y un fragor.
-            </p>
-
-            <p>
-            Despierta. Nada alea. No hay <rs type="animal">aves</rs> raras que violenten ese ámbito triste y 
-            recogido donde el temor de <persName ref="#lumila">Lumila</persName> va cediendo, tal vez porque cosa alguna 
-            ocurre, excepto en sus pesadillas, o porque la guarda el <name type="dog">Fiel</name>, tan sumiso.
-            </p>
-
-            <p>
-            <said who="#lumila" aloud="false">
-            «Así debiste llamarte 
-            <said>—piensa que tendría que decirle⁠—</said>: 
-            <persName ref="#sumiso">Sumiso</persName>
-            </said>, 
-            y pronuncia el nuevo <rs type="abstract">nombre</rs> con un tono acariciante.
+            Viene, sí, y no convocado por voluntad humana alguna, el Zonda, el 
+            viento malo, caliente y terroso.
             </p>
             
             <p>
-            Previene el día que vendrá. Como se está durmiendo, se le enciman 
-            ensoñaciones y deseos, y en ellas su puesto desborda de gente que la atiende 
-            en su luto y sin duda se ocupará de darle sepultura al finadito. Pero ninguno le 
-            calma la sed.
+            Zumba, danza y manotea, arroja sus aires cargados de polvo y arena, 
+            destroza los brotes y ramas. En la inmensidad, se afana en sacudir los <rs type="place" ref="#rancho">ranchos</rs> 
+            dispersos de las familias pastoras de cabras, tan apartadas unas de otras que ni 
             </p>
-
-            <milestone unit="section" rend="asterisks"/>
-    
-            <div type="section" n="6">
-              <p>
-              A la hora de las <rs type="animal">cabras</rs>, se le retuerce la pena por la <rs type="animal" subtype="collective">chivada</rs> que no tiene 
-              escape al campo para su mascada, y ha de soportar resecos los lisos troncos de 
-              bebedero… A la par, codicia la leche de las ubres de cabra que podrían darle 
-              líquido y alimento.
-              </p>
-
-              <p>
-              Tolera el amanecer y los balidos que apenan. Sobrelleva o pretende 
-              ignorar la compañía forzosa que tiene en el lecho, porque —⁠se conforta⁠— es 
-              mejor no presenciar lo que está pasando en la piel de su hombre.
-              </p>
-
-              <p>
-              Pone los sentidos y la imaginación en la espera. Unos segundos escucha la 
-              campanilla de don Casimir el puntillero; otros la deslumbra un destello de sol 
-              en la hojalata que forma el techo curvo de la carretela del achurero, cuando 
-              está haciendo el codo de la huella hacia el <rs type="place" ref="#rancho">rancho</rs>…
-              </p>
-
-              <p>
-              Nada de eso sucede. Nadie viene.
-              </p>
-
-              <p>
-              Viene, sí, y no convocado por voluntad humana alguna, el Zonda, el 
-              viento malo, caliente y terroso.
-              </p>
-              
-              <p>
-              Zumba, danza y manotea, arroja sus aires cargados de polvo y arena, 
-              destroza los brotes y ramas. En la inmensidad, se afana en sacudir los <rs type="place" ref="#rancho">ranchos</rs> 
-              dispersos de las familias pastoras de cabras, tan apartadas unas de otras que ni 
-              </p>
-            </div>
+          </div>
         </div>
 
         <div id="hoja-tei-8" class="hoja-tei">
@@ -1002,7 +990,7 @@
 
           <p>
           No se atreve a confesar que se alivia. Ya no lo tiene adosado, ya no lo 
-          verá si no lo busca inclinándose hacia esa parte.
+          verá si no lo busca indinándose hacia esa parte.
            </p>
 
           <p>
@@ -1014,17 +1002,17 @@
           Hiede. El calor abrasador del Zonda ha acelerado la descomposición del 
           cuerpo.
           </p>
-
+ 
           <p>
           La mujer se amarga y cruje de impotencia. Se cuida, por respeto a los 
           muertos, de sublevarse contra «ese hombre».
           </p>
 
           <milestone unit="section" rend="asterisks"/>
-
+    
           <div type="section" n="7">
             <p>
-            La hambruna desbanda a los <rs type="animal">perros</rs>. Se internan en los <rs type="place" ref="#monte">montes</rs> a recuperar el 
+            La hambruna desbanda a los <rs type="animal">perros</rs>. Se internan en los  <rs type="place" ref="#monte">montes</rs> a recuperar el 
             ancestral oficio de cazar para comer. Sólo dos se quedan: el <name type="dog">Fiel</name> y la 
             <name type="dog">Blanquita</name>.
             </p>
@@ -1045,10 +1033,11 @@
           Se avecinan a los <rs type="place" ref="#rancho">ranchos</rs> donde en alguna ocasión llegaron con el amo;
             sin embargo, los ahuyenta la hostilidad de sus propios congéneres.
           </p>
+
           <p>
           Cuando avistan el <rs type="place" ref="#casa">hogar</rs> de Inés, la <rs type="animal" subtype="collective">perrada</rs> de la <rs type="place" ref="#casa">casa</rs> hace frente a la 
           invasión, pero el litigio no pasa de los tarascones, ya que el puestero reconoce 
-          a los visitantes y aplica las leyes campesinas de la hospitalidad. Pone paz y 
+          a los visitantes y aplica las leyes Campesinas de la hospitalidad. Pone paz y 
           los admite convencido de que su compadre, don <persName ref="#gabriel">Gabriel</persName>, ha de andar por las 
           cercanías, tal vez recogiendo <rs type="animal">chivos</rs> sueltos, y ya se aparecerá tras ese par de 
           adelantados.
@@ -1191,7 +1180,7 @@
           </p>
 
           <p>
-          —¡No me hagás daño, <persName ref="#Fiel" key="Fiel" ana="#diminutivo">Fielito</persName>!
+          —¡No me hagás daño, ¡<persName ref="#Fiel" key="Fiel" ana="#diminutivo">Fielito</persName>!
           </p>
 
           <p>
@@ -1203,13 +1192,13 @@
 
       <aside class="columna-pdf">
         <div class="selector-paginas">
-          <span>Vista Facsimilar (PDF) - <strong id="info-pagina">Página 1 de 10</strong></span>
+          <span>Vista Facsimilar (PDF)</span>
           <div class="nav-paginas-btns">
-            <button id="btn-ant" onclick="cambiarPagina(-1)" disabled>« Ant.</button>
-            <button id="btn-sig" onclick="cambiarPagina(1)">Sig. »</button>
+            <button disabled>« Ant.</button>
+            <button>Sig. »</button>
           </div>
         </div>
-        <iframe id="visor-pdf" src="pez.pdf#page=1" title="Visor PDF"></iframe>
+        <iframe src="CC-ADB-4-Absurdos.Pez-p-50-59.pdf" title="Visor PDF"></iframe>
       </aside>
 
     </div>
@@ -1222,70 +1211,41 @@
     </div>
   </div>
 
+  <div id="bitacora" class="tab-content">
+    <div class="container-seccion">
+      <h2>Bitácora</h2>
+      <p>Proyección del repositorio digital para el corpus narrativo de Antonio Di Benedetto.</p>
+    </div>
+  </div>
+
   <div id="bibliografia" class="tab-content">
     <div class="container-seccion">
       <h2>Bibliografía del Proyecto</h2>
-      <p>Biblioteca de referencia sobre Antonio Di Benedetto y la edición digital crítica:</p>
-      
-      <div class="zotero-box">
-        <h3>📚 Grupo de Bibliografía en Zotero</h3>
-        <p>Debido a las políticas de seguridad del servidor de Zotero (bloqueo por <em>X-Frame-Options</em>), la biblioteca web no permite visualizarse empotrada en un iframe. Puedes consultar el repositorio completo de fuentes y referencias bibliográficas ingresando directamente:</p>
-        <a href="https://www.zotero.org/groups/6623495/" target="_blank" class="zotero-btn">
-          Abrir Biblioteca Zotero en una nueva pestaña ↗
-        </a>
-      </div>
+      <p>Biblioteca de referencia sobre Di Benedetto y la edición digital crítica:</p>
+      <br>
+      <iframe src="https://www.zotero.org/groups/6623495/" width="100%" height="520" style="border: 1px solid #ccc; border-radius: 6px;"></iframe>
     </div>
   </div>
 
   <script>
-    // NAVEGACIÓN DE PESTAÑAS
     function mostrarPestana(idPestana, enlace) {
+      // Ocultar todas las pestañas
       const contenidos = document.querySelectorAll('.tab-content');
       contenidos.forEach(tab => tab.classList.remove('active'));
 
+      // Desactivar el estado 'active' de todos los enlaces del menú
       const enlaces = document.querySelectorAll('nav.navbar a');
       enlaces.forEach(link => link.classList.remove('active'));
 
+      // Mostrar la pestaña seleccionada
       const pestanaDestino = document.getElementById(idPestana);
       if (pestanaDestino) {
         pestanaDestino.classList.add('active');
       }
 
+      // Activar el enlace seleccionado
       if (enlace) {
         enlace.classList.add('active');
-      }
-    }
-
-    // NAVEGACIÓN SINCRONIZADA TEI + PDF
-    let paginaActual = 1;
-    const totalPaginas = 10;
-    const rutaPDF = "pez.pdf"; // Cambia aquí el nombre de tu archivo PDF si se llama diferente
-
-    function cambiarPagina(delta) {
-      const nuevaPagina = paginaActual + delta;
-
-      if (nuevaPagina >= 1 && nuevaPagina <= totalPaginas) {
-        // Ocultar hoja TEI actual
-        document.getElementById(`hoja-tei-${paginaActual}`).classList.remove('active');
-        
-        // Actualizar número de página
-        paginaActual = nuevaPagina;
-        
-        // Mostrar nueva hoja TEI
-        document.getElementById(`hoja-tei-${paginaActual}`).classList.add('active');
-        
-        // Sincronizar visor PDF (#page=X)
-        document.getElementById('visor-pdf').src = `${rutaPDF}#page=${paginaActual}`;
-        
-        // Actualizar indicador en pantalla
-        document.getElementById('info-pagina').innerText = `Página ${paginaActual} de ${totalPaginas}`;
-        
-        // Estado de botones de navegación
-        document.getElementById('btn-ant').disabled = (paginaActual === 1);
-        document.getElementById('btn-sig').disabled = (paginaActual === totalPaginas);
-
-        // Volver arriba el scroll de la columna de texto al cambiar de página
-        document.querySelector('.columna-texto').scrollTop = 0;
       }
     }
   </script>
