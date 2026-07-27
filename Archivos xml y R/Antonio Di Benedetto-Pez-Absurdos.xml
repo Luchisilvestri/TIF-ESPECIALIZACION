@@ -157,11 +157,15 @@
       vacío en la mente y se adormece. Por más que se enzarcen tenazmente en el 
       <rs type="place" ref="#monte">monte</rs>, lancen bocadas como suspiros, o chirríen, o se parezcan a los lamentos 
       y el peligro.
+      Los <rs type="sound" subtype="ambient" ana="#susurro">susurros de la noche</rs> reculan, para <persName ref="#lumila">Lumila</persName>, y desaparecen. 
+      Se le hacen un <rs type="sound" subtype="silence" ana="#vacio">vacío en la mente</rs> y se adormece. Por más que se enzarcen tenazmente en el
+      <rs type="place" ref="#monte">monte</rs>, lancen bocadas como suspiros, o chirríen, 
+      o se parezcan a los lamentos y el peligro.
       </p>
         
       <p>
       Duerme bajo la noche, la <persName ref="#lumila">Lumila</persName>, un sueño ligero y frágil. Se le quiebra y 
-      le pone los ojos muy abiertos lo que le viene de adentro: el presentimiento. 
+      le pone los <rs type="human" subtype="part">ojos</rs> muy abiertos lo que le viene de adentro: el presentimiento. 
       No vuelve su hombre. No es de fiar tanta ausencia.
       </p>
         
@@ -169,48 +173,48 @@
       Ya no dormirá, mientras no lo vea; se perece por verlo, aunque no 
       aparezca sano… ni entero. Se retrae y se comprime ante este último 
       pensamiento: que regrese, del <rs type="place" ref="#boliche">boliche del rancherío</rs> lejano, con algunos tajos 
-      en la cara o en el cuerpo.
+      en la <rs type="human" subtype="part">cara</rs> o en el <rs type="human" subtype="part">cuerpo</rs>.
       </p>
 
       <p>
-      Todo el silencio —que no es silencio, sino murmullos apelmazados 
-      para su conciencia, porque no llegan los sonidos que ella aguarda⁠— se apelotona y 
-      se le hace como una bola que le estorba en el vientre.
+      Todo el <rs type="sound" subtype="silence" ana="#silencio">silencio</rs> —que no es silencio, sino <rs type="sound" subtype="ambient" ana="#murmullo">murmullos apelmazados</rs> 
+      para su conciencia, porque no llegan los <rs type="sound" subtype="ambient" ana="#sonido">sonidos</rs> que ella aguarda⁠— se apelotona y 
+      se le hace como una bola que le estorba en el <rs type="human" subtype="part">vientre</rs>.
       </p>
 
       <p>
-      Tiene ganas de llorar, en estas altas horas más que nunca, pero se frena, 
-      atenta a oír, porque aun a distancia la consolará cualquier indicio del jinete. 
-      No tiene que adivinar la naturaleza de los ruidos, sin esmero los descifra 
-      todos, de las <rs type="animal">aves</rs> y las <rs type="animal">alimañnas</rs>, o del aire. Busca quedarse en blanco de 
+      Tiene ganas de <rs type="emotion" key="llanto">llorar</rs>, en estas altas horas más que nunca, pero se frena, 
+      <phr type="perception" subtype="auditory">atenta a oír</phr>, porque aun a distancia la consolará cualquier 
+      <rs type="sound" subtype="sign" key="indicio">indicio del jinete</rs>. 
+      No tiene que adivinar la naturaleza de los <rs type="sound" subtype="ambient" key="ruido">ruidos</rs>, sin esmero <phr type="perception" subtype="auditory">los descifra todos</phr>, 
+      de las <rs type="animal">aves</rs> y las <rs type="animal">alimañas</rs>, o del aire. Busca quedarse en blanco de 
       ellos, para filtrar el que le conviene. Busca recobrar memorias agradables, 
-      para distraerse, y las comunes, y se acuerda de otro terror de la infancia: el 
+      para distraerse, y las comunes, y se acuerda de otro <rs type="emotion" key="terror">terror</rs> de la infancia: el 
       <rs type="animal">pájaro</rs> enorme con cuerpo de <rs type="animal">pez</rs>.
       </p>
 
       <p>
-      <said who="#gabriel">—Y sin patas</said> —suele comentar su hombre, que asegura haberlo visto.
+      <said who="#gabriel" aloud="true" direct="true">—Y sin patas</said> —suele <seg type="delivery" ana="#comentario">comentar</seg> su hombre, que asegura haberlo visto.
       </p>
 
       <p>
-      <said who="#Lumila">—¿Y cómo hace para posarse?</said> —⁠ella ha porfiado siempre, esperanzada 
-      en que sea falso que ese <rs type="animal">monstruo</rs> existe.
+      <said who="#lumila" aloud="true" direct="true">—¿Y cómo hace para posarse?</said> —⁠ella ha <seg type="delivery" ana="#porfía">porfiado siempre</seg>, <phr type="emotion" subtype="esperanza">esperanzada en que sea falso</phr> que ese <rs type="animal">monstruo</rs> existe.
       </p>
 
       <p>
-      <said who="#gabriel">—Se posa en el agua.</said>
+      <said who="#gabriel" aloud="true" direct="true">—Se posa en el agua.</said>
       </p>
 
       <p>
-      <said who="#Lumila">—Por aquí no hay agua.</said>
+      <said who="#lumila" aloud="true" direct="true">—Por aquí no hay agua.</said>
       </p>
 
       <p>
-      <said who="#gabriel">—Antes la había, grande como el mar.</said>
+      <said who="#gabriel" aloud="true" direct="true">—Antes la había, grande como el mar.</said>
       </p>
 
       <p>
-      <said who="#Lumila">—Pero si no eras nacido, Gabriel…</said>
+      <said who="#lumila" aloud="true" direct="true">—Pero si no eras nacido, Gabriel…</said>
       </p>
 
       <p>
@@ -219,7 +223,7 @@
       </p>
 
       <p>
-      <said who="#gabriel">—Asienta en la arena lisa, todo esto que fue el fondo del agua grande.</said>
+      <said who="#gabriel">—Asienta en la arena lisa, todo esto que fue el fondo del <placeName>agua grande</placeName>.</said>
       </p>
 
       <p>
@@ -265,8 +269,8 @@
       <p>
       Para <persName ref="#lumila">Lumila</persName> vienen juntos un lloro rabón y consolado y una sensación que 
       de una sola olida —⁠ha irrumpido un vaho de alcohol en la atmósfera⁠— le 
-          hace proferir el reniego de: <said who="#Lumila">«¡Jiede…!»</said>.
-          </p>
+      hace proferir el reniego de: <said who="#Lumila">«¡Jiede…!»</said>.
+      </p>
 
           <p>
           El hombre gatea hasta el lecho, lo escala como puede, prendiéndose de las curvas de hierro 
@@ -397,8 +401,8 @@
           </p>
 
           <p>
-          Se propone descender de la cama. Toma apoyó en el brazo izquierdo y 
-          procura favorecer el impulso con la pierna del mismo costado. Pero no le 
+          Se propone descender de la cama. Toma apoyo en el <rs type="human" subtype="part">brazo izquierdo</rs> y
+          procura favorecer el impulso con la <rs type="human" subtype="part">pierna</rs> del mismo costado. Pero no le 
           obedece.
           </p>
 
@@ -407,8 +411,8 @@
           </p>
 
           <p>
-          Se le desmanda la pierna izquierda, igual que en otro tiempo y hasta el 
-          presente, quizás para siempre, se le desgobernaron pierna y brazo del flanco 
+           Se le desmanda la <rs type="human" subtype="part">pierna izquierda</rs>, igual que en otro tiempo y hasta el 
+          presente, quizás para siempre, se le desgobernaron <rs type="human" subtype="part">pierna</rs> y <rs type="human" subtype="part">brazo</rs> del flanco 
           derecho.
           </p>
 
@@ -434,23 +438,24 @@
           Reacciona, reclamada por la necesidad de que esto cambie pronto, de 
           inmediato, que cese el casi total tullimiento que de súbito padece. Acciona la 
           cabeza para consultar, medio ladeada, las estampitas que tiene paradas en la 
-          mesa de luz, y con fervor, acezante, reza y ruega, reza y ruega, implora… <said who="#lumila" aloud="true">«un 
-          milagrito, Señor, que se me resucite el <persName ref="#gabriel">Gabriel</persName>»</said>
+          mesa de luz, y con <rs type="emotion" key="fervor">fervor</rs>, acezante, 
+          <seg type="delivery" ana="#oracion">reza y ruega, reza y ruega, implora…</seg> 
+          <said who="#lumila" aloud="true" direct="true">«un milagrito, Señor, que se me resucite el <persName ref="#gabriel">Gabriel</persName>»</said>
           </p>
 
           <p>
           Se aplica a mirar intensamente al marido yacente y pálido, con algún 
-          sobresalto por si lo que pidió sucede de repente. En la espera <persName ref="#lumila">Lumila</persName> 
+          <rs type="emotion" key="sobresalto">sobresalto</rs> por si lo que pidió sucede de repente. En la espera <persName ref="#lumila">Lumila</persName> 
           <said who="#lumila" aloud="false" direct="false">se está 
           preguntando por dónde podrá recuperar la vida: por la carne o por el 
           entendimiento… Si primero que nada abrirá los ojos (que en el trance se le 
           quedaron cerrados, tal vez porque finó cuando se hallaba durmiendo). O si se 
-          hará presénte, más bien, de palabra, y qué misterios podrá decir. Y si para 
+          hará presente, más bien, de palabra, y qué misterios podrá decir. Y si para 
           volver se sufre…</said>
           </p>
 
           <p>
-          Atardece.
+          <time type="diurnal" subtype="atardecer">Atardece.</time>
           </p>
 
           <p>
@@ -460,8 +465,19 @@
           </p>
 
           <p>
-          —Tiene que ser por miedo… Miedo al dijunto, aunque sea mi hombre. El 
-          miedo mata y me mató la pierna que me quedaba sana.
+          <said who="#lumila" aloud="true" direct="true">—Tiene que ser por <rs type="emotion" key="miedo">miedo</rs>… Miedo al dijunto, aunque sea mi hombre. El 
+          <rs type="emotion" key="miedo">miedo</rs> mata y me mató la pierna que me quedaba sana.</said>
+          </p>
+
+          <p>
+          Necesita ver algo viviente en su cercanía, junto a ella. 
+          <seg type="delivery" ana="#llamado">Llama</seg> a los <rs type="animal">canes</rs>:
+          <said who="#lumila" aloud="true" direct="true">—<persName ref="#Fiel" key="Fiel">Fiel</persName>, <name type="dog">Lión</name>, <name type="dog">Capú</name>.</said>
+          </p>
+
+          <p>
+          <said who="#lumila" aloud="true" direct="true">—Tiene que ser por <rs type="emotion" key="miedo">miedo</rs>… Miedo al dijunto, aunque sea mi hombre. El 
+          <rs type="emotion" key="miedo">miedo</rs> mata y me mató la pierna que me quedaba sana.</said>
           </p>
 
           <p>
@@ -591,12 +607,12 @@
           </p>
 
           <p>
-          Grita. Necesita gritar.
+          <seg type="delivery" ana="#grito">Grita.</seg> Necesita <seg type="delivery" ana="#grito">gritar.</seg>
           </p>
 
           <p>
-          Desde el patio, los <rs type="animal">perros</rs> la escuchan, a su manera la siguen, la copian, 
-          con lastimero aullido.
+          Desde el patio, los <rs type="animal">perros</rs> <phr type="perception" subtype="auditory">la escuchan</phr>, a su manera la siguen, la copian, 
+          con <rs type="sound" subtype="animal" key="aullido">lastimero aullido</rs>.
           </p>
 
           <p>
@@ -605,29 +621,16 @@
           </p>
 
           <p>
-          A <persName ref="#lumila">Lumila</persName> la vence la ternura y llora lágrimas dulces.
+          A <persName ref="#lumila">Lumila</persName> la vence la <rs type="emotion" key="ternura">ternura</rs> y llora <rs type="emotion" key="llanto">lágrimas dulces</rs>.
           </p>
 
           <p>
-          Mas luego, consumida, se interna de nuevo en el sueño, y se sueña en la 
-          laguna o el mar que fue, y hay tormenta que abate las canoas de totora de los 
-          pescadores que usan las redes y el <rs type="animal" subtype="hybrid">el <rs type="animal">ave</rs> de enormes <rs type="animal" subtype="part">alas</rs> y <rs type="animal" subtype="part">cuerpo</rs> de <rs type="animal">pez</rs></rs>
-          irrumpe en su <rs type="place" ref="#rancho">cuarto del rancho</rs>, con un graznido y un fragor.
-          </p>
-
-          <p>
-          Despierta. Nada alea. No hay <rs type="animal">aves</rs> raras que violenten ese ámbito triste y 
-          recogido donde el temor de <persName ref="#lumila">Lumila</persName> va cediendo, tal vez porque cosa alguna 
-          ocurre, excepto en sus pesadillas, o porque la guarda el <name type="dog">Fiel</name>, tan sumiso.
-          </p>
-
-          <p>
-          <said who="#lumila" aloud="false">
+          <said who="#lumila" aloud="false" direct="false">
           «Así debiste llamarte 
-          <said>—piensa que tendría que decirle⁠—</said>: 
-          <persName ref="#sumiso">Sumiso</persName>
+          <said who="#lumila" aloud="false" direct="false">—piensa que tendría que decirle⁠—</said>: 
+          <persName ref="#sumiso">Sumiso</persName>»
           </said>, 
-          y pronuncia el nuevo <rs type="abstract">nombre</rs> con un tono acariciante.
+          y <seg type="delivery" ana="#acariciante">pronuncia el nuevo nombre con un tono acariciante</seg>.
           </p>
           
           <p>
@@ -892,8 +895,8 @@
           Recobra debilitados los sentidos y descubre que su <rs type="animal">perro</rs> pasa y repasa su 
           lengua cálida por la herida. Cambia en consecuencia sus impresiones, 
           confiada, y sonríe. Está exhausta y ha quedado tendida de espaldas. Ya se 
-          descansa y le dice, con cariño y gratitud:
-          —Sos mi <rs type="animal">perro</rs> y te llamás <name type="dog">Fiel</name>. Bien nombrao, siempre lo supe.
+          descansa y le <seg type="delivery" ana="#afectuoso">dice, con cariño y gratitud</seg>:
+          <said who="#lumila" aloud="true" direct="true">—Sos mi <rs type="animal">perro</rs> y te llamás <name type="dog">Fiel</name>. Bien nombrao, siempre lo supe.</said>
           </p>
 
           <p>
@@ -914,11 +917,11 @@
           </p>
 
           <p>
-          —¡No me hagás daño, ¡<persName ref="#Fiel" key="Fiel" ana="#diminutivo">Fielito</persName>!
+          <said who="#lumila" aloud="true" direct="true">—¡No me hagás daño, <persName ref="#Fiel" key="Fiel" ana="#diminutivo">Fielito</persName>!</said>
           </p>
 
           <p>
-          Se lo dice con espanto. Sumisa, como de rodillas.
+          <phr type="delivery" ana="#espanto">Se lo dice con espanto.</phr> <phr type="attitude" ana="#sumision">Sumisa, como de <rs type="human" subtype="part">rodillas</rs>.</phr>
           </p>
 
         </div>
