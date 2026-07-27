@@ -1242,27 +1242,64 @@
   </div>
 
   <script>
-    function mostrarPestana(idPestana, enlace) {
-      // Ocultar todas las pestañas
-      const contenidos = document.querySelectorAll('.tab-content');
-      contenidos.forEach(tab => tab.classList.remove('active'));
+  let paginaActual = 1;
+  const totalPaginas = 10;
+  // Nombre o ruta de tu archivo PDF
+  const archivoPDF = "tu-documento.pdf"; 
 
-      // Desactivar el estado 'active' de todos los enlaces del menú
-      const enlaces = document.querySelectorAll('nav.navbar a');
-      enlaces.forEach(link => link.classList.remove('active'));
+  function mostrarPestana(idPestana, enlace) {
+    const contenidos = document.querySelectorAll('.tab-content');
+    contenidos.forEach(tab => tab.classList.remove('active'));
 
-      // Mostrar la pestaña seleccionada
-      const pestanaDestino = document.getElementById(idPestana);
-      if (pestanaDestino) {
-        pestanaDestino.classList.add('active');
-      }
+    const enlaces = document.querySelectorAll('nav.navbar a');
+    enlaces.forEach(link => link.classList.remove('active'));
 
-      // Activar el enlace seleccionado
-      if (enlace) {
-        enlace.classList.add('active');
-      }
+    const pestanaDestino = document.getElementById(idPestana);
+    if (pestanaDestino) {
+      pestanaDestino.classList.add('active');
     }
-  </script>
 
-</body>
-</html>
+    if (enlace) {
+      enlace.classList.add('active');
+    }
+  }
+
+  function cambiarPagina(numeroPagina) {
+    if (numeroPagina < 1 || numeroPagina > totalPaginas) return;
+
+    paginaActual = numeroPagina;
+
+    // 1. Mostrar únicamente la hoja TEI seleccionada
+    const hojas = document.querySelectorAll('.hoja-tei');
+    hojas.forEach(hoja => hoja.classList.remove('active'));
+    
+    const hojaDestino = document.getElementById('hoja-tei-' + paginaActual);
+    if (hojaDestino) {
+      hojaDestino.classList.add('active');
+    }
+
+    // 2. Sincronizar la página del PDF
+    const iframePdf = document.getElementById('visor-pdf');
+    if (iframePdf) {
+      iframePdf.src = archivoPDF + '#page=' + paginaActual;
+    }
+
+    // 3. Sincronizar el selector desplegable
+    const select = document.getElementById('select-pagina');
+    if (select) {
+      select.value = paginaActual;
+    }
+
+    // 4. Habilitar o deshabilitar botones Anterior / Siguiente
+    document.getElementById('btn-ant').disabled = (paginaActual === 1);
+    document.getElementById('btn-sig').disabled = (paginaActual === totalPaginas);
+  }
+
+  function paginaAnterior() {
+    cambiarPagina(paginaActual - 1);
+  }
+
+  function paginaSiguiente() {
+    cambiarPagina(paginaActual + 1);
+  }
+</script>
