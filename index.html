@@ -196,7 +196,6 @@
       font-size: 1.1rem;
     }
 
-    /* Regla estricta para asegurar que la tipografía de los párrafos no varíe */
     .columna-texto p {
       font-family: 'Georgia', serif;
       font-size: 1.1rem;
@@ -284,20 +283,20 @@
     .espacio-blanco { height: 20px; }
     .titulo-rojo { color: #c0392b; font-size: 2.2em; font-weight: bold; margin-bottom: 20px; text-align: center; }
 
-    /* RENDERIZADO DE SECCIONES TEI Y MILESTONES (CORREGIDO) */
+    /* RENDERIZADO DE SECCIONES TEI Y MILESTONES */
     div[type="section"] {
       margin-bottom: 15px;
     }
 
-  milestone[unit="section"] {
-  display: block;
-  text-align: center;
-  margin: 25px 0; /* Mantiene solo la separación vertical */
-  }
+    milestone[unit="section"] {
+      display: block;
+      text-align: center;
+      margin: 25px 0;
+    }
 
-  milestone[unit="section"]::before {
-  content: "* * *";
-  }
+    milestone[unit="section"]::before {
+      content: "* * *";
+    }
 
     /* HOJAS TEI (SINCRONIZACIÓN CON PDF) */
     .hoja-tei {
@@ -328,7 +327,7 @@
       <li><a class="nav-link active" onclick="mostrarPestana('inicio', this)">Inicio / Autor</a></li>
       <li><a class="nav-link" onclick="mostrarPestana('edicion', this)">Edición Paralela ("Pez")</a></li>
       <li><a class="nav-link" onclick="mostrarPestana('glosario', this)">Glosario</a></li>
-      <li><a class="nav-link active" onclick="mostrarPestana('bitacora', this)">Bitácora</a></li>
+      <li><a class="nav-link" onclick="mostrarPestana('bitacora', this)">Bitácora</a></li>
       <li><a class="nav-link" onclick="mostrarPestana('bibliografia', this)">Bibliografía (Zotero)</a></li>
     </ul>
   </nav>
@@ -634,7 +633,7 @@
             </p>
           </div>
         </div>
-        
+
         <div id="hoja-tei-4" class="hoja-tei">
           <div type="section" n="4">
             <milestone unit="section" rend="asterisks"/>
@@ -826,7 +825,7 @@
           de camino y ni cuenta se da de los puestos que deja hacia adentro del campo, 
           a menos que alguien se adelante a hacerle señas o lo persiga a caballo hasta 
           donde se le atasque el coche, en algún jarillal. Lo evoca, <persName ref="#lumila">Lumila</persName>, con su largo 
-          guardapolvo blanco, las manos pulcras y la mirada fanática, y se va diciendo: 
+          guardapolvo blanco, las hands pulcras y la mirada fanática, y se va diciendo: 
           <said who="#lumila" aloud="true">«Y tan Bueno que es, pero tan loco…»</said>, 
           hasta que vuelve sobre sí misma y se dice: 
           <said who="#lumila" aloud="false">«Tan sola, mi alma…»</said>, 
@@ -1192,28 +1191,28 @@
 
       <aside class="columna-pdf">
         <div class="selector-paginas">
-        <span>Vista Facsimilar (PDF)</span>
-    
-        <select id="select-pagina" onchange="cambiarPagina(parseInt(this.value))">
-        <option value="1">Página 1</option>
-        <option value="2">Página 2</option>
-        <option value="3">Página 3</option>
-        <option value="4">Página 4</option>
-        <option value="5">Página 5</option>
-        <option value="6">Página 6</option>
-        <option value="7">Página 7</option>
-        <option value="8">Página 8</option>
-        <option value="9">Página 9</option>
-        <option value="10">Página 10</option>
-    </select>
+          <span>Vista Facsimilar (PDF)</span>
+      
+          <select id="select-pagina" onchange="cambiarPagina(parseInt(this.value))">
+            <option value="1">Página 1</option>
+            <option value="2">Página 2</option>
+            <option value="3">Página 3</option>
+            <option value="4">Página 4</option>
+            <option value="5">Página 5</option>
+            <option value="6">Página 6</option>
+            <option value="7">Página 7</option>
+            <option value="8">Página 8</option>
+            <option value="9">Página 9</option>
+            <option value="10">Página 10</option>
+          </select>
 
-    <div class="nav-paginas-btns">
-      <button id="btn-ant" onclick="paginaAnterior()" disabled>« Ant.</button>
-      <button id="btn-sig" onclick="paginaSiguiente()">Sig. »</button>
-    </div>
-  </div>
+          <div class="nav-paginas-btns">
+            <button id="btn-ant" onclick="paginaAnterior()" disabled>« Ant.</button>
+            <button id="btn-sig" onclick="paginaSiguiente()">Sig. »</button>
+          </div>
+        </div>
 
-      <iframe id="visor-pdf" src="CC-ADB-4-Absurdos.Pez-p-50-59.pdf#page=1" title="Visor PDF"></iframe>
+        <iframe id="visor-pdf" src="CC-ADB-4-Absurdos.Pez-p-50-59.pdf#page=1" title="Visor PDF"></iframe>
       </aside>
     </div>
   </div>
@@ -1237,69 +1236,73 @@
       <h2>Bibliografía del Proyecto</h2>
       <p>Biblioteca de referencia sobre Di Benedetto y la edición digital crítica:</p>
       <br>
-      <iframe src="https://www.zotero.org/groups/6623495/tif_especializacion_hd_untref" width="100%" height="520" style="border: 1px solid #ccc; border-radius: 6px;"></iframe>
+      <iframe src="https://www.zotero.org/groups/6623495/" width="100%" height="520" style="border: 1px solid #ccc; border-radius: 6px;"></iframe>
+      <p style="margin-top: 10px; font-size: 0.9rem;">Si el grupo de Zotero no se despliega correctamente, puedes <a href="https://www.zotero.org/groups/6623495/" target="_blank">abrir la biblioteca directamente en Zotero</a>.</p>
     </div>
   </div>
 
   <script>
-  let paginaActual = 1;
-  const totalPaginas = 10;
-  // Nombre o ruta de tu archivo PDF
-  const archivoPDF = "tu-documento.pdf"; 
+    let paginaActual = 1;
+    const totalPaginas = 10;
+    // Nombre exacto de tu archivo PDF en la misma carpeta
+    const archivoPDF = "CC-ADB-4-Absurdos.Pez-p-50-59.pdf";
 
-  function mostrarPestana(idPestana, enlace) {
-    const contenidos = document.querySelectorAll('.tab-content');
-    contenidos.forEach(tab => tab.classList.remove('active'));
+    function mostrarPestana(idPestana, enlace) {
+      const contenidos = document.querySelectorAll('.tab-content');
+      contenidos.forEach(tab => tab.classList.remove('active'));
 
-    const enlaces = document.querySelectorAll('nav.navbar a');
-    enlaces.forEach(link => link.classList.remove('active'));
+      const enlaces = document.querySelectorAll('nav.navbar a');
+      enlaces.forEach(link => link.classList.remove('active'));
 
-    const pestanaDestino = document.getElementById(idPestana);
-    if (pestanaDestino) {
-      pestanaDestino.classList.add('active');
+      const pestanaDestino = document.getElementById(idPestana);
+      if (pestanaDestino) {
+        pestanaDestino.classList.add('active');
+      }
+
+      if (enlace) {
+        enlace.classList.add('active');
+      }
     }
 
-    if (enlace) {
-      enlace.classList.add('active');
+    function cambiarPagina(numeroPagina) {
+      if (numeroPagina < 1 || numeroPagina > totalPaginas) return;
+
+      paginaActual = numeroPagina;
+
+      // 1. Mostrar únicamente la hoja TEI seleccionada
+      const hojas = document.querySelectorAll('.hoja-tei');
+      hojas.forEach(hoja => hoja.classList.remove('active'));
+      
+      const hojaDestino = document.getElementById('hoja-tei-' + paginaActual);
+      if (hojaDestino) {
+        hojaDestino.classList.add('active');
+      }
+
+      // 2. Sincronizar la página del PDF
+      const iframePdf = document.getElementById('visor-pdf');
+      if (iframePdf) {
+        iframePdf.src = archivoPDF + '#page=' + paginaActual;
+      }
+
+      // 3. Sincronizar el selector desplegable
+      const select = document.getElementById('select-pagina');
+      if (select) {
+        select.value = paginaActual;
+      }
+
+      // 4. Habilitar o deshabilitar botones
+      document.getElementById('btn-ant').disabled = (paginaActual === 1);
+      document.getElementById('btn-sig').disabled = (paginaActual === totalPaginas);
     }
-  }
 
-  function cambiarPagina(numeroPagina) {
-    if (numeroPagina < 1 || numeroPagina > totalPaginas) return;
-
-    paginaActual = numeroPagina;
-
-    // 1. Mostrar únicamente la hoja TEI seleccionada
-    const hojas = document.querySelectorAll('.hoja-tei');
-    hojas.forEach(hoja => hoja.classList.remove('active'));
-    
-    const hojaDestino = document.getElementById('hoja-tei-' + paginaActual);
-    if (hojaDestino) {
-      hojaDestino.classList.add('active');
+    function paginaAnterior() {
+      cambiarPagina(paginaActual - 1);
     }
 
-    // 2. Sincronizar la página del PDF
-    const iframePdf = document.getElementById('visor-pdf');
-    if (iframePdf) {
-      iframePdf.src = archivoPDF + '#page=' + paginaActual;
+    function paginaSiguiente() {
+      cambiarPagina(paginaActual + 1);
     }
+  </script>
 
-    // 3. Sincronizar el selector desplegable
-    const select = document.getElementById('select-pagina');
-    if (select) {
-      select.value = paginaActual;
-    }
-
-    // 4. Habilitar o deshabilitar botones Anterior / Siguiente
-    document.getElementById('btn-ant').disabled = (paginaActual === 1);
-    document.getElementById('btn-sig').disabled = (paginaActual === totalPaginas);
-  }
-
-  function paginaAnterior() {
-    cambiarPagina(paginaActual - 1);
-  }
-
-  function paginaSiguiente() {
-    cambiarPagina(paginaActual + 1);
-  }
-</script>
+</body>
+</html>
