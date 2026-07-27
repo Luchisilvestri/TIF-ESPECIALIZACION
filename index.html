@@ -1192,15 +1192,29 @@
 
       <aside class="columna-pdf">
         <div class="selector-paginas">
-          <span>Vista Facsimilar (PDF)</span>
-          <div class="nav-paginas-btns">
-            <button disabled>« Ant.</button>
-            <button>Sig. »</button>
-          </div>
-        </div>
-        <iframe src="CC-ADB-4-Absurdos.Pez-p-50-59.pdf" title="Visor PDF"></iframe>
-      </aside>
+        <span>Vista Facsimilar (PDF)</span>
+    
+        <select id="select-pagina" onchange="cambiarPagina(parseInt(this.value))">
+        <option value="1">Página 1</option>
+        <option value="2">Página 2</option>
+        <option value="3">Página 3</option>
+        <option value="4">Página 4</option>
+        <option value="5">Página 5</option>
+        <option value="6">Página 6</option>
+        <option value="7">Página 7</option>
+        <option value="8">Página 8</option>
+        <option value="9">Página 9</option>
+        <option value="10">Página 10</option>
+    </select>
 
+    <div class="nav-paginas-btns">
+      <button id="btn-ant" onclick="paginaAnterior()" disabled>« Ant.</button>
+      <button id="btn-sig" onclick="paginaSiguiente()">Sig. »</button>
+    </div>
+  </div>
+
+      <iframe id="visor-pdf" src="CC-ADB-4-Absurdos.Pez-p-50-59.pdf#page=1" title="Visor PDF"></iframe>
+      </aside>
     </div>
   </div>
 
