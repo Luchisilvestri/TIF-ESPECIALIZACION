@@ -1241,68 +1241,71 @@
     </div>
   </div>
 
-  <script>
-    let paginaActual = 1;
-    const totalPaginas = 10;
-    // Nombre exacto de tu archivo PDF en la misma carpeta
-    const archivoPDF = "CC-ADB-4-Absurdos.Pez-p-50-59.pdf";
+<script>
+  let paginaActual = 1;
+  const totalPaginas = 10;
+  // Nombre exacto de tu archivo PDF
+  const archivoPDF = "CC-ADB-4-Absurdos.Pez-p-50-59.pdf"; 
 
-    function mostrarPestana(idPestana, enlace) {
-      const contenidos = document.querySelectorAll('.tab-content');
-      contenidos.forEach(tab => tab.classList.remove('active'));
+  function mostrarPestana(idPestana, enlace) {
+    const contenidos = document.querySelectorAll('.tab-content');
+    contenidos.forEach(tab => tab.classList.remove('active'));
 
-      const enlaces = document.querySelectorAll('nav.navbar a');
-      enlaces.forEach(link => link.classList.remove('active'));
+    const enlaces = document.querySelectorAll('nav.navbar a');
+    enlaces.forEach(link => link.classList.remove('active'));
 
-      const pestanaDestino = document.getElementById(idPestana);
-      if (pestanaDestino) {
-        pestanaDestino.classList.add('active');
-      }
-
-      if (enlace) {
-        enlace.classList.add('active');
-      }
+    const pestanaDestino = document.getElementById(idPestana);
+    if (pestanaDestino) {
+      pestanaDestino.classList.add('active');
     }
 
-    function cambiarPagina(numeroPagina) {
-      if (numeroPagina < 1 || numeroPagina > totalPaginas) return;
+    if (enlace) {
+      enlace.classList.add('active');
+    }
+  }
 
-      paginaActual = numeroPagina;
+  function cambiarPagina(numeroPagina) {
+    if (numeroPagina < 1 || numeroPagina > totalPaginas) return;
 
-      // 1. Mostrar únicamente la hoja TEI seleccionada
-      const hojas = document.querySelectorAll('.hoja-tei');
-      hojas.forEach(hoja => hoja.classList.remove('active'));
-      
-      const hojaDestino = document.getElementById('hoja-tei-' + paginaActual);
-      if (hojaDestino) {
-        hojaDestino.classList.add('active');
-      }
+    paginaActual = numeroPagina;
 
-      // 2. Sincronizar la página del PDF
-      const iframePdf = document.getElementById('visor-pdf');
-      if (iframePdf) {
-        iframePdf.src = archivoPDF + '#page=' + paginaActual;
-      }
-
-      // 3. Sincronizar el selector desplegable
-      const select = document.getElementById('select-pagina');
-      if (select) {
-        select.value = paginaActual;
-      }
-
-      // 4. Habilitar o deshabilitar botones
-      document.getElementById('btn-ant').disabled = (paginaActual === 1);
-      document.getElementById('btn-sig').disabled = (paginaActual === totalPaginas);
+    // 1. CAMBIA LA PÁGINA TEI
+    const hojas = document.querySelectorAll('.hoja-tei');
+    hojas.forEach(hoja => hoja.classList.remove('active'));
+    
+    const hojaDestino = document.getElementById('hoja-tei-' + paginaActual);
+    if (hojaDestino) {
+      hojaDestino.classList.add('active');
     }
 
-    function paginaAnterior() {
-      cambiarPagina(paginaActual - 1);
+    // 2. CAMBIA LA PÁGINA DEL PDF AL MISMO TIEMPO
+    const iframePdf = document.getElementById('visor-pdf');
+    if (iframePdf) {
+      // Reasignar el src con el hash #page=X fuerza al navegador a saltar de página en el PDF
+      iframePdf.src = archivoPDF + '#page=' + paginaActual;
     }
 
-    function paginaSiguiente() {
-      cambiarPagina(paginaActual + 1);
+    // 3. Sincroniza el menú desplegable <select>
+    const select = document.getElementById('select-pagina');
+    if (select) {
+      select.value = paginaActual;
     }
-  </script>
+
+    // 4. Actualiza el estado de los botones (Anterior / Siguiente)
+    const btnAnt = document.getElementById('btn-ant');
+    const btnSig = document.getElementById('btn-sig');
+    if (btnAnt) btnAnt.disabled = (paginaActual === 1);
+    if (btnSig) btnSig.disabled = (paginaActual === totalPaginas);
+  }
+
+  function paginaAnterior() {
+    cambiarPagina(paginaActual - 1);
+  }
+
+  function paginaSiguiente() {
+    cambiarPagina(paginaActual + 1);
+  }
+</script>
 
 </body>
 </html>
