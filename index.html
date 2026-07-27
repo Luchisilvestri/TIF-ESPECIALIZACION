@@ -1244,8 +1244,8 @@
 <script>
   let paginaActual = 1;
   const totalPaginas = 10;
-  // Nombre exacto de tu archivo PDF
-  const archivoPDF = "CC-ADB-4-Absurdos.Pez-p-50-59.pdf"; 
+  // Nombre exacto del archivo PDF que debe estar en la misma carpeta que este index.html
+  const archivoPDF = "CC-ADB-4-Absurdos.Pez-p-50-59.pdf";
 
   function mostrarPestana(idPestana, enlace) {
     const contenidos = document.querySelectorAll('.tab-content');
@@ -1281,11 +1281,10 @@
     // 2. CAMBIA LA PÁGINA DEL PDF AL MISMO TIEMPO
     const iframePdf = document.getElementById('visor-pdf');
     if (iframePdf) {
-      // Reasignar el src con el hash #page=X fuerza al navegador a saltar de página en el PDF
       iframePdf.src = archivoPDF + '#page=' + paginaActual;
     }
 
-    // 3. Sincroniza el menú desplegable <select>
+    // 3. Sincroniza el desplegable de páginas
     const select = document.getElementById('select-pagina');
     if (select) {
       select.value = paginaActual;
