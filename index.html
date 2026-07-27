@@ -1190,30 +1190,32 @@
       </main>
 
       <aside class="columna-pdf">
-        <div class="selector-paginas">
-          <span>Vista Facsimilar (PDF)</span>
-      
-          <select id="select-pagina" onchange="cambiarPagina(parseInt(this.value))">
-            <option value="1">Página 1</option>
-            <option value="2">Página 2</option>
-            <option value="3">Página 3</option>
-            <option value="4">Página 4</option>
-            <option value="5">Página 5</option>
-            <option value="6">Página 6</option>
-            <option value="7">Página 7</option>
-            <option value="8">Página 8</option>
-            <option value="9">Página 9</option>
-            <option value="10">Página 10</option>
-          </select>
+  <div class="selector-paginas">
+    <span>Vista Facsimilar (PDF)</span>
+    
+    <select id="select-pagina" onchange="cambiarPagina(parseInt(this.value))">
+      <option value="1">Página 1</option>
+      <option value="2">Página 2</option>
+      <option value="3">Página 3</option>
+      <option value="4">Página 4</option>
+      <option value="5">Página 5</option>
+      <option value="6">Página 6</option>
+      <option value="7">Página 7</option>
+      <option value="8">Página 8</option>
+      <option value="9">Página 9</option>
+      <option value="10">Página 10</option>
+    </select>
 
-          <div class="nav-paginas-btns">
-            <button id="btn-ant" onclick="paginaAnterior()" disabled>« Ant.</button>
-            <button id="btn-sig" onclick="paginaSiguiente()">Sig. »</button>
-          </div>
-        </div>
+    <div class="nav-paginas-btns">
+      <button id="btn-ant" onclick="paginaAnterior()" disabled>« Ant.</button>
+      <button id="btn-sig" onclick="paginaSiguiente()">Sig. »</button>
+    </div>
+  </div>
 
-        <iframe id="visor-pdf" src="CC-ADB-4-Absurdos.Pez-p-50-59.pdf#page=1" title="Visor PDF"></iframe>
-      </aside>
+  <div style="flex: 1; overflow: auto; display: flex; justify-content: center; align-items: flex-start; padding: 10px; background-color: #525659;">
+    <canvas id="pdf-canvas"></canvas>
+  </div>
+</aside>
     </div>
   </div>
 
@@ -1241,11 +1243,45 @@
     </div>
   </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
 <script>
+  // Configuración de PDF.js
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+
+  let pdfDoc = null;
   let paginaActual = 1;
   const totalPaginas = 10;
-  // Nombre exacto del archivo PDF que debe estar en la misma carpeta que este index.html
   const archivoPDF = "CC-ADB-4-Absurdos.Pez-p-50-59.pdf";
+
+  // Cargar el documento PDF al iniciar
+  pdfjsLib.getDocument(archivoPDF).promise.then(doc => {
+    pdfDoc = doc;
+    renderizarPaginaPDF(paginaActual);
+  }).catch(err => {
+    console.error("Error al cargar el PDF. Verifica que el nombre del archivo sea correcto:", err);
+  });
+
+  // Función para dibujar la página del PDF en el <canvas>
+  function renderizarPaginaPDF(num) {
+    if (!pdfDoc) return;
+
+    pdfDoc.getPage(num).then(page => {
+      const canvas = document.getElementById('pdf-canvas');
+      const ctx = canvas.getContext('2d');
+
+      // Escala de renderizado (1.3 para buena resolución)
+      const viewport = page.getViewport({ scale: 1.3 });
+      canvas.height = viewport.height;
+      canvas.width = viewport.width;
+
+      const renderContext = {
+        canvasContext: ctx,
+        viewport: viewport
+      };
+      page.render(renderContext);
+    });
+  }
 
   function mostrarPestana(idPestana, enlace) {
     const contenidos = document.querySelectorAll('.tab-content');
@@ -1269,7 +1305,7 @@
 
     paginaActual = numeroPagina;
 
-    // 1. CAMBIA LA PÁGINA TEI
+    // 1. Mostrar la página TEI correspondiente
     const hojas = document.querySelectorAll('.hoja-tei');
     hojas.forEach(hoja => hoja.classList.remove('active'));
     
@@ -1278,19 +1314,16 @@
       hojaDestino.classList.add('active');
     }
 
-    // 2. CAMBIA LA PÁGINA DEL PDF AL MISMO TIEMPO
-    const iframePdf = document.getElementById('visor-pdf');
-    if (iframePdf) {
-      iframePdf.src = archivoPDF + '#page=' + paginaActual;
-    }
+    // 2. Renderizar la página del PDF
+    renderizarPaginaPDF(paginaActual);
 
-    // 3. Sincroniza el desplegable de páginas
+    // 3. Sincronizar el desplegable
     const select = document.getElementById('select-pagina');
     if (select) {
       select.value = paginaActual;
     }
 
-    // 4. Actualiza el estado de los botones (Anterior / Siguiente)
+    // 4. Actualizar botones
     const btnAnt = document.getElementById('btn-ant');
     const btnSig = document.getElementById('btn-sig');
     if (btnAnt) btnAnt.disabled = (paginaActual === 1);
