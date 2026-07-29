@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="pez_schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
 <teiHeader>
   <fileDesc>
     
@@ -34,7 +33,7 @@
     <extent>680 páginas</extent>
 
     <publicationStmt>
-      <authority>Proyecto de codificación TEI - Luciana</authority>
+      <authority>Proyecto de codificación TEI - Luciana Silvestri</authority>
       <date>2026</date>
       <availability>
         <p>Texto codificado con fines de investigación y edición digital académica.</p>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  
+  <include href="https://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng">
+    
+    <define name="said">
+      <element name="said">
+        <attribute name="who">
+          <data type="anyURI"/>
+        </attribute>
+        <attribute name="aloud">
+          <choice>
+            <value>true</value>
+            <value>false</value>
+          </choice>
+        </attribute>
+        <attribute name="direct">
+          <choice>
+            <value>true</value>
+            <value>false</value>
+          </choice>
+        </attribute>
+        <zeroOrMore>
+          <choice>
+            <text/>
+            <ref name="macro.specialPara"/>
+          </choice>
+        </zeroOrMore>
+      </element>
+    </define>
+
+    <define name="rs">
+      <element name="rs">
+        <attribute name="type">
+          <choice>
+            <value>human</value>
+            <value>animal</value>
+            <value>body</value>
+            <value>sound</value>
+            <value>emotion</value>
+            <value>place</value>
+          </choice>
+        </attribute>
+        <optional>
+          <attribute name="subtype">
+            <choice>
+              <value>part</value>
+              <value>substance</value>
+              <value>condition</value>
+              <value>animal</value>
+              <value>ambient</value>
+              <value>sign</value>
+              <value>silence</value>
+              <value>micro</value>
+              <value>region</value>
+            </choice>
+          </attribute>
+        </optional>
+        <optional>
+          <attribute name="ana"/>
+        </optional>
+        <optional>
+          <attribute name="key"/>
+        </optional>
+        <optional>
+          <attribute name="ref"/>
+        </optional>
+        <zeroOrMore>
+          <choice>
+            <text/>
+            <ref name="macro.phraseSeq"/>
+          </choice>
+        </zeroOrMore>
+      </element>
+    </define>
+
+  </include>
+</grammar>

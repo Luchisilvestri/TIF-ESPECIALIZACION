@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="es">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Esquema de Personalización TEI para el proyecto "Pez" de Antonio Di Benedetto</title>
+        <author>Luciana Silvestri</author>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Proyecto de codificación TEI y análisis digital</authority>
+        <date>2026</date>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Nacido para la codificación crítica del cuento "Pez", publicado en Absurdos (Cuentos Completos).</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  
+  <text>
+    <body>
+      <head>Especificación de Esquema y Manual de Codificación</head>
+      <p>Este documento registra el marcado de anatomía (humana y animal), paisaje sonoro, enunciación y entidades (personas, animales, entre otras) en el texto de Antonio Di Benedetto.</p>
+      
+      <schemaSpec ident="pez_schema" start="TEI" source="https://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng">
+        
+        <moduleRef key="tei"/>
+        <moduleRef key="header"/>
+        <moduleRef key="core"/>
+        <moduleRef key="textstructure"/>
+        <moduleRef key="namesdates"/>
+        <moduleRef key="analysis"/>
+
+        <elementSpec ident="said" mode="change">
+          <attList>
+            <attDef ident="aloud" mode="change" usage="req">
+              <valList type="closed" mode="replace">
+                <valItem ident="true"><desc>Emitido en voz alta</desc></valItem>
+                <valItem ident="false"><desc>Monólogo interior o pensamiento no vocalizado</desc></valItem>
+              </valList>
+            </attDef>
+            <attDef ident="direct" mode="change" usage="req">
+              <valList type="closed" mode="replace">
+                <valItem ident="true"><desc>Discurso directo</desc></valItem>
+                <valItem ident="false"><desc>Discurso indirecto</desc></valItem>
+              </valList>
+            </attDef>
+            <attDef ident="who" mode="change" usage="req"/>
+          </attList>
+        </elementSpec>
+
+        <elementSpec ident="rs" mode="change">
+          <attList>
+            <attDef ident="type" mode="change" usage="req">
+              <valList type="closed" mode="replace">
+                <valItem ident="human"><desc>Anatomía / partes del cuerpo humano</desc></valItem>
+                <valItem ident="animal"><desc>Anatomía o referencias a entidades animales</desc></valItem>
+                <valItem ident="body"><desc>Sustancias, fluidos o condiciones corporales</desc></valItem>
+                <valItem ident="sound"><desc>Fenómenos acústicos y paisaje sonoro</desc></valItem>
+                <valItem ident="emotion"><desc>Estados afectivos o emociones</desc></valItem>
+                <valItem ident="place"><desc>Referencias espaciales o de localización</desc></valItem>
+              </valList>
+            </attDef>
+            <attDef ident="subtype" mode="change" usage="opt">
+              <valList type="open" mode="replace">
+                <valItem ident="part"><desc>Parte del cuerpo anatómico</desc></valItem>
+                <valItem ident="substance"><desc>Sustancia orgánica</desc></valItem>
+                <valItem ident="condition"><desc>Estado físico o alteración motriz</desc></valItem>
+                <valItem ident="animal"><desc>Sonido de origen animal</desc></valItem>
+                <valItem ident="ambient"><desc>Ruido o sonido del entorno natural</desc></valItem>
+                <valItem ident="sign"><desc>Indicio o señal acústica</desc></valItem>
+                <valItem ident="silence"><desc>Ausencia de sonido / silencio</desc></valItem>
+                <valItem ident="micro"><desc>Microespacio o elemento del espacio doméstico</desc></valItem>
+              </valList>
+            </attDef>
+          </attList>
+        </elementSpec>
+
+        <elementSpec ident="seg" mode="change">
+          <attList>
+            <attDef ident="type" mode="change" usage="opt">
+              <valList type="closed" mode="replace">
+                <valItem ident="delivery"><desc>Modalidad de entrega vocal o actitud del habla</desc></valItem>
+                <valItem ident="posture"><desc>Postura corporal expresiva</desc></valItem>
+              </valList>
+            </attDef>
+          </attList>
+        </elementSpec>
+
+        <elementSpec ident="phr" mode="change">
+          <attList>
+            <attDef ident="type" mode="change" usage="opt">
+              <valList type="closed" mode="replace">
+                <valItem ident="delivery"><desc>Modalidad vocal o de enunciación</desc></valItem>
+                <valItem ident="attitude"><desc>Actitud o corporalidad vinculada al acto expresivo</desc></valItem>
+                <valItem ident="perception"><desc>Actos de percepción sensorial (ej. auditiva)</desc></valItem>
+              </valList>
+            </attDef>
+            <attDef ident="subtype" mode="change" usage="opt">
+              <valList type="closed" mode="replace">
+                <valItem ident="auditory"><desc>Percepción de tipo auditivo</desc></valItem>
+              </valList>
+            </attDef>
+          </attList>
+        </elementSpec>
+
+        <elementSpec ident="time" mode="change">
+          <attList>
+            <attDef ident="type" mode="change" usage="opt">
+              <valList type="closed" mode="replace">
+                <valItem ident="diurnal"><desc>Marcadores de momentos del día</desc></valItem>
+              </valList>
+            </attDef>
+          </attList>
+        </elementSpec>
+
+      </schemaSpec>
+    </body>
+  </text>
+</TEI>
